@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "stdout": [
+    [
+      0.495622,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                                  \r \r"
+    ],
+    [
+      0.001096,
+      "\u001b]7;file://istation/home/iocanel/voxxed/hellothess\u0007"
+    ],
+    [
+      0.00012,
+      "\u001b]2;iocanel@istation: ~/voxxed/hellothess\u0007\u001b]1;..ed/hellothess\u0007"
+    ],
+    [
+      0.046892,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/hellothess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[170C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[173D"
+    ],
+    [
+      2.3e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      3.9e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.482902,
+      "g\u001b[90mofabric8 validate\u001b[39m\u001b[17D"
+    ],
+    [
+      0.087811,
+      "\bg\u001b[39mo"
+    ],
+    [
+      0.183797,
+      "\u001b[39mf"
+    ],
+    [
+      0.22377,
+      "\u001b[39ma"
+    ],
+    [
+      0.096081,
+      "\u001b[39mb"
+    ],
+    [
+      0.144435,
+      "\u001b[39mr"
+    ],
+    [
+      0.256855,
+      "\u001b[39mc\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[11D"
+    ],
+    [
+      0.422766,
+      "\b\u001b[90mi\u001b[90mc8 validate\u001b[39m\u001b[12D"
+    ],
+    [
+      0.399805,
+      "\u001b[39mi"
+    ],
+    [
+      0.176157,
+      "\u001b[39mc"
+    ],
+    [
+      0.071937,
+      "\u001b[39m8"
+    ],
+    [
+      0.264268,
+      "\u001b[39m "
+    ],
+    [
+      0.335894,
+      "\u001b[39md\u001b[90me\u001b[90mp\u001b[90ml\u001b[90mo\u001b[90my\u001b[90m \u001b[90m-\u001b[90my --app=\"\"\u001b[39m\u001b[17D"
+    ],
+    [
+      0.57964,
+      "\u001b[39me\u001b[39mp\u001b[39ml\u001b[39mo\u001b[39my\u001b[39m \u001b[39m-\u001b[39my\u001b[39m \u001b[39m-\u001b[39m-\u001b[39ma\u001b[39mp\u001b[39mp\u001b[39m=\u001b[39m\"\u001b[39m\""
+    ],
+    [
+      0.343853,
+      "\u001b[?1l\u001b>\u001b[?2004l"
+    ],
+    [
+      2.9e-05,
+      "\r\r\n"
+    ],
+    [
+      0.000776,
+      "\u001b]2;gofabric8 deploy -y --app=\"\"\u0007\u001b]1;gofabric8\u0007"
+    ],
+    [
+      0.007906,
+      "\u001b[0;34m             \u001b[38;5;25m▄\u001b[38;5;25m▄▄\u001b[38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;235m▄\u001b[39m         \u001b[00m\r\n             \u001b[48;5;25;38;5;25m█\u001b[48;5;235;38;5;235m█\u001b[48;5;235;38;5;235m█\u001b[48;5;25;38;5;25m█\u001b[48;5;25;38;5;25m█\u001b[48;5;25;38;5;25m█\u001b[48;5;235;38;5;235m█\u001b[49;39m         \u001b[00m\r\n     \u001b[48;5;233;38;5;235m▄\u001b[48;5;235;38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;24m▄\u001b[38;5;25m▄\u001b[48;5;233;38;5;235m▄\u001b[49;39m \u001b[48;5;25;38;5;25m▄\u001b[48;5;235;38;5;24m▄\u001b[48;5;235;38;5;24m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;235;38;5;235m█\u001b[49;39m         \u001b[00m\r\n     \u001b[48;5;235;38;5;235m█\u001b[48;5;24;38;5;24m█\u001b[48;5;25;38;5;25m█\u001b[48;5;24;38;5;24m█\u001b[48;5;235;38;5;235m█\u001b[48;5;25;38;5;25m█\u001b[48;5;235;38;5;235m█\u001b[49;39m \u001b[38;5;235m▀\u001b[38;5;235m▀▀▀▀▀\u001b[38;5;233m▀\u001b[39m \u001b[48;5;235;38;5;24m▄\u001b[48;5;235;38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;24m▄\u001b[48;5;235;38;5;25m▄\u001b[49;39m  \u001b[00m\r\n     \u001b[48;5;235;38;5;235m▄\u001b[48;5;24;38;5;25m▄\u001b[48"
+    ],
+    [
+      2.3e-05,
+      ";5;25;38;5;25m▄\u001b[48;5;24;38;5;25m▄\u001b[48;5;235;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;235;38;5;235m▄\u001b[49;39m         \u001b[48;5;67;38;5;67m█\u001b[48;5;25;38;5;25m█\u001b[48;5;25;38;5;25m█\u001b[48;5;25;38;5;25m█\u001b[48;5;235;38;5;235m█\u001b[48;5;25;38;5;25m█\u001b[49;39m  \u001b[00m\r\n   \u001b[38;5;233m▄\u001b[38;5;235m▄\u001b[48;5;235;38;5;24m▄\u001b[48;5;235;38;5;25m▄\u001b[49;38;5;235m▄\u001b[39m             \u001b[48;5;67;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;235;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[49;39m  \u001b[00m\r\n   \u001b[38;5;235m▀\u001b[48;5;25;38;5;24m▄\u001b[48;5;24;38;5;25m▄\u001b[48;5;25;38;5;68m▄\u001b[48;5;24;38;5;25m▄\u001b[49;38;5;25m▄\u001b[39m      \u001b[38;5;235m▄\u001b[38;5;235m▄\u001b[38;5;17m▄\u001b[39m       \u001b[38;5;25m▄\u001b[38;5;25m▄\u001b[38;5;235m▄\u001b[39m \u001b[00m\r\n    \u001b[38;5;23m▀\u001b[48;5;110;38;5;60m▄\u001b[48;5;110;38;5;254m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;233;38;5;25m▄\u001b[49;38;5;235m▄\u001b[38;5;24m▄\u001b[38;5;25m▄\u001b[48;5;60;38;5;25m▄\u001b[48;5;67;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;110m▄\u001b[48;5;25;38;5;1"
+    ],
+    [
+      1.1e-05,
+      "10m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;233;38;5;25m▄\u001b[49;39m   \u001b[38;5;233m▄\u001b[48;5;17;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;24;38;5;25m▄\u001b[48;5;25;38;5;24m▄\u001b[49;38;5;233m▀\u001b[39m\u001b[00m\r\n      \u001b[38;5;60m▀\u001b[48;5;153;38;5;24m▄\u001b[48;5;68;38;5;110m▄\u001b[48;5;25;38;5;67m▄\u001b[48;5;25;38;5;25m▄\u001b[48;5;110;38;5;25m▄\u001b[48;5;67;38;5;255m▄\u001b[48;5;32;38;5;110m▄\u001b[48;5;68;38;5;110m▄\u001b[48;5;68;38;5;67m▄\u001b[48;5;25;38;5;110m▄\u001b[48;5;25;38;5;110m▄\u001b[38;5;110m▄\u001b[48;5;25;38;5;67m▄\u001b[48;5;24;38;5;67m▄\u001b[48;5;233;38;5;25m▄\u001b[49;38;5;25m▄\u001b[48;5;24;38;5;25m▄\u001b[48;5;25;38;5;25m█\u001b[38;5;25m▄\u001b[48;5;25;38;5;24m▄\u001b[49;38;5;17m▀\u001b[39m \u001b[00m\r\n        \u001b[38;5;233m▀\u001b[38;5;24m▀\u001b[48;5;25;38;5;235m▄\u001b[48;5;25;38;5;25m█\u001b[48;5;153;38;5;110m▄\u001b[48;5;67;38;5;110m▄\u001b[48;5;252;38;5;255m▄\u001b[48;5;254;38;5;231m▄\u001b[48;5;254m▄\u001b[48;5;253;38;5;224m▄\u001b[48;5;252;38;5;255m▄\u001b[48;5;110;38;5;231m▄\u001b[48;5;110;38;5;231m▄\u001b[48;5;61;38;5;110m▄\u001b[48;5;25;38;5;25m▄\u001b[38;5;24m▄\u001b[48;5;25;38;5;233m▄\u001b[49;38;5;24m▀\u001b[39m   \u001b[0"
+    ],
+    [
+      1.1e-05,
+      "0m\r\n          \u001b[48;5;235;38;5;235m▄\u001b[48;5;25;38;5;25m█\u001b[48;5;67;38;5;67m▄\u001b[48;5;110;38;5;110m▄\u001b[48;5;255;38;5;255m▄\u001b[48;5;231;38;5;231m█\u001b[48;5;255;38;5;216m▄\u001b[48;5;223;38;5;209m▄\u001b[48;5;223;38;5;223m▄\u001b[48;5;231;38;5;231m█\u001b[48;5;231;38;5;231m▄\u001b[48;5;110;38;5;110m▄\u001b[48;5;235;38;5;235m▄\u001b[49;39m      \u001b[00m\r\n          \u001b[48;5;235;38;5;235m▄\u001b[48;5;25;38;5;25m█\u001b[48;5;32;38;5;25m▄\u001b[48;5;67;38;5;25m▄\u001b[48;5;255;38;5;254m▄\u001b[48;5;231;38;5;255m▄\u001b[48;5;209;38;5;180m▄\u001b[48;5;209;38;5;223m▄\u001b[48;5;224;38;5;173m▄\u001b[48;5;231;38;5;255m▄\u001b[48;5;231;38;5;255m▄\u001b[48;5;110;38;5;67m▄\u001b[48;5;235;38;5;235m▄\u001b[49;39m      \u001b[00m\r\n           \u001b[48;5;25;38;5;235m▄\u001b[48;5;25;38;5;25m▄\u001b[38;5;25m█\u001b[48;5;32m▄\u001b[48;5;110;38;5;25m▄\u001b[48;5;110;38;5;25m▄\u001b[48;5;110m▄\u001b[48;5;110m▄\u001b[48;5;110m▄\u001b[48;5;67m▄\u001b[48;5;25;38;5;25m▄\u001b[49;39m       \u001b[00m\r\n            \u001b[48;5;25;38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[38;5;25m▄\u001b[48;5;25;38;5;25m▄\u001b[49;38;5;235m▀\u001b[38;5;235m▀\u001b[48;5;25;38;5;25m▄\u001b[48;5;25"
+    ],
+    [
+      9e-06,
+      ";38;5;25m█\u001b[48;5;25;38;5;25m▄\u001b[49;39m        \u001b[00m\r\n         \u001b[38;5;188m▄\u001b[48;5;242;38;5;188m▄\u001b[48;5;242;38;5;188m▄\u001b[48;5;25;38;5;250m▄\u001b[48;5;25;38;5;67m▄\u001b[48;5;67;38;5;67m▄\u001b[48;5;25;38;5;68m▄\u001b[48;5;250;38;5;25m▄\u001b[48;5;188;38;5;188m▄\u001b[48;5;25;38;5;110m▄\u001b[48;5;68;38;5;32m▄\u001b[48;5;25;38;5;67m▄\u001b[48;5;250;38;5;68m▄\u001b[48;5;188;38;5;251m▄\u001b[48;5;247;38;5;237m▄\u001b[49;39m     \u001b[00m\r\n         \u001b[38;5;237m▀\u001b[38;5;242m▀\u001b[38;5;242m▀\u001b[38;5;247m▀\u001b[38;5;188m▀\u001b[38;5;251m▀\u001b[38;5;188m▀\u001b[38;5;188m▀\u001b[38;5;188m▀\u001b[38;5;188m▀\u001b[38;5;188m▀\u001b[38;5;188m▀\u001b[38;5;247m▀\u001b[38;5;237m▀\u001b[39m      \u001b[00m\r\n\u001b[0m"
+    ],
+    [
+      0.032261,
+      "Deploying fabric8 to your \u001b[0;32mKubernetes\u001b[0m installation at \u001b[0;32mhttps://192.168.42.198:443\u001b[0m for domain \u001b[0;32mistation.f8\u001b[0m in namespace \u001b[0;32mdefault\r\n\r\n\u001b[0m"
+    ],
+    [
+      0.000961,
+      "Loading fabric8 releases from maven repository:\u001b[0;32mhttps://repo1.maven.org/maven2/\r\n\u001b[0m"
+    ],
+    [
+      1.133814,
+      "\u001b[0;33m\r\nStarting fabric8 console deployment using 2.2.182...\r\n\r\n\u001b[0m"
+    ],
+    [
+      0.208493,
+      "fabric8 console...............................................................\u001b[0;32m✔ \u001b[0m\r\n"
+    ],
+    [
+      0.019093,
+      "addServiceAccount fluentd.....................................................\u001b[0;32m✔ \u001b[0m\r\n"
+    ],
+    [
+      0.017502,
+      "addServiceAccount registry....................................................\u001b[0;32m✔ \u001b[0m\r\nCreated fabric8 console\r\nInstalling templates!\r\n"
+    ],
+    [
+      3.6e-05,
+      "Downloading apps from: https://repo1.maven.org/maven2/io/fabric8/forge/distro/distro/2.3.54/distro-2.3.54-templates.zip\r\n"
+    ],
+    [
+      0.456485,
+      "Loading template kubernetes/main/chat-letschat.yml\r\n"
+    ],
+    [
+      0.014057,
+      "Loading template kubernetes/microservices/fabric8-docker-registry.yml\r\n"
+    ],
+    [
+      0.016189,
+      "Loading template kubernetes/microservices/git-collector.yml\r\n"
+    ],
+    [
+      0.006473,
+      "Loading template kubernetes/microservices/gitlab.yml\r\n"
+    ],
+    [
+      0.00546,
+      "Loading template kubernetes/microservices/gerrit.yml\r\n"
+    ],
+    [
+      0.32603,
+      "Loading template kubernetes/microservices/ingress-nginx.yml\r\n"
+    ],
+    [
+      0.399019,
+      "Loading template kubernetes/microservices/chaos-monkey.yml\r\n"
+    ],
+    [
+      0.405515,
+      "Loading template kubernetes/main/cd-pipeline.yml\r\n"
+    ],
+    [
+      0.410997,
+      "Loading template kubernetes/microservices/artifactory.yml\r\n"
+    ],
+    [
+      0.384834,
+      "Loading template kubernetes/microservices/jenkins.yml\r\n"
+    ],
+    [
+      0.402269,
+      "Loading template kubernetes/microservices/gogs.yml\r\n"
+    ],
+    [
+      0.401034,
+      "Loading template kubernetes/microservices/letschat.yml\r\n"
+    ],
+    [
+      0.395247,
+      "Loading template kubernetes/microservices/maven-shell.yml\r\n"
+    ],
+    [
+      0.39918,
+      "Loading template kubernetes/microservices/manageiq.yml\r\n"
+    ],
+    [
+      0.401548,
+      "Loading template kubernetes/microservices/nexus.yml\r\n"
+    ],
+    [
+      0.399682,
+      "Loading template kubernetes/microservices/content-repository.yml\r\n"
+    ],
+    [
+      0.399615,
+      "Loading template kubernetes/microservices/fabric8-forge.yml\r\n"
+    ],
+    [
+      0.402442,
+      "Loading template kubernetes/main/chat-slack.yml\r\n"
+    ],
+    [
+      0.400623,
+      "Loading template kubernetes/microservices/kiwiirc.yml\r\n"
+    ],
+    [
+      0.396894,
+      "Loading template kubernetes/main/social.yml\r\n"
+    ],
+    [
+      0.401893,
+      "Loading template kubernetes/microservices/exposecontroller.yml\r\n"
+    ],
+    [
+      0.39945,
+      "Loading template kubernetes/main/chat-irc.yml\r\n"
+    ],
+    [
+      0.403974,
+      "Loading template kubernetes/main/management.yml\r\n"
+    ],
+    [
+      0.401561,
+      "Install DevOps templates......................................................\u001b[0;32m✔ \u001b[0m\r\n"
+    ],
+    [
+      3.5e-05,
+      "Downloading apps from: https://repo1.maven.org/maven2/io/fabric8/ipaas/distro/distro/2.2.154/distro-2.2.154-templates.zip\r\n"
+    ],
+    [
+      0.190137,
+      "Loading template kubernetes/microservices/example-message-consumer.yml\r\n"
+    ],
+    [
+      0.403764,
+      "Loading template kubernetes/main/messaging.yml\r\n"
+    ],
+    [
+      0.401222,
+      "Loading template kubernetes/microservices/example-message-producer.yml\r\n"
+    ],
+    [
+      0.39755,
+      "Loading template kubernetes/microservices/message-broker.yml\r\n"
+    ],
+    [
+      0.40019,
+      "Loading template kubernetes/microservices/cassandra.yml\r\n"
+    ],
+    [
+      0.400226,
+      "Loading template kubernetes/microservices/message-gateway.yml\r\n"
+    ],
+    [
+      0.400144,
+      "Loading template kubernetes/microservices/zookeeper.yml\r\n"
+    ],
+    [
+      0.400387,
+      "Loading template kubernetes/microservices/kafka.yml\r\n"
+    ],
+    [
+      0.39876,
+      "Install iPaaS templates.......................................................\u001b[0;32m✔ \u001b[0m\r\n"
+    ],
+    [
+      2e-05,
+      "Downloading apps from: https://repo1.maven.org/maven2/io/fabric8/kubeflix/distro/distro/1.0.22/distro-1.0.22-templates.zip\r\n"
+    ],
+    [
+      0.197712,
+      "Loading template kubernetes/microservices/hystrix-dashboard.yml\r\n"
+    ],
+    [
+      0.403485,
+      "Loading template kubernetes/main/kubeflix.yml\r\n"
+    ],
+    [
+      0.400772,
+      "Loading template kubernetes/microservices/turbine-server.yml\r\n"
+    ],
+    [
+      0.397086,
+      "Install Kubeflix templates....................................................\u001b[0;32m✔ \u001b[0m\r\n"
+    ],
+    [
+      2.9e-05,
+      "Downloading apps from: https://repo1.maven.org/maven2/io/fabric8/zipkin/packages/distro/0.1.5/distro-0.1.5-templates.zip\r\n"
+    ],
+    [
+      0.441704,
+      "Loading template main/zipkin-0.1.5.json\r\n"
+    ],
+    [
+      0.206119,
+      "Install Zipkin templates......................................................\u001b[0;32m✔ \u001b[0m\r\n\r\n\r\nInstalling: \u001b[0;32mexposecontroller\r\n\r\n\u001b[0m"
+    ],
+    [
+      0.552197,
+      "Processing resource kind: ServiceAccount\r\n"
+    ],
+    [
+      0.19923,
+      "Processing resource kind: ConfigMap\r\n"
+    ],
+    [
+      0.200265,
+      "Processing resource kind: Deployment\r\n"
+    ],
+    [
+      0.200723,
+      "exposecontroller..............................................................\u001b[0;32m✔ \u001b[0m\r\n"
+    ],
+    [
+      1.600637,
+      "\r\n-------------------------\r\n\r\nDefault GOGS admin username/password = \u001b[0;32mgogsadmin/RedHat$1\r\n\u001b[0m\r\nDownloading images and waiting to open the fabric8 console...\r\n\r\n-------------------------\r\n"
+    ],
+    [
+      0.001838,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                                  \r \r"
+    ],
+    [
+      0.001184,
+      "\u001b]7;file://istation/home/iocanel/voxxed/hellothess\u0007"
+    ],
+    [
+      7.7e-05,
+      "\u001b]2;iocanel@istation: ~/voxxed/hellothess\u0007\u001b]1;..ed/hellothess\u0007"
+    ],
+    [
+      0.043515,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/hellothess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[170C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[173D"
+    ],
+    [
+      5.3e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ]
+  ],
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "height": 52,
+  "width": 211,
+  "command": "/usr/bin/zsh --login",
+  "duration": 606.375617
+}

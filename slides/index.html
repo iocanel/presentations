@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Getting Started with Microservices on Kubernetes</title>
+
+    <meta name="description" content="An introduction to microservices development on Kubernetes">
+    <meta name="author" content="Ioannis Canellos">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=2.0, user-scalable=no">
+    <link rel="icon" type="image/png" src="images/kubernetes.png"/>
+    <link rel="stylesheet" type="text/css" href="css/powerline.css"/>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="css/asciinema-player.css"/>
+    <!--link rel="stylesheet" href="css/print/pdf.css"-->
+
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet-->
+    <!--script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script-->
+    
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="js/asciinema-player.js"></script>
+</head>
+
+<body>
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <section>
+            <!--iframe src="http://istation:8181" tyle="width: 90%; height="90%" scrolling="no"/-->
+            <h2>Getting started with</h2>
+            <h2>microservices</h2>
+
+            <img width="396" height="356" src="images/kubernetes.png" alt="Kubernetes Logo">
+            <h2>on Kubernetes</h2>
+            <p>
+
+                <small>by <a href="http://iocanel.blogspot.com">Ioannis Canellos</a> / <a
+                        href="http://twitter.com/iocanel">@iocanel</a></small>
+            </p>
+        </section>
+        <section>
+            <h2>about me...</h2>
+            <img src="images/aboutme.png" alt="About me"/>
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section>
+            <h2>agenda</h2>
+            <img src="images/agenda.png" alt="Agenda"/>
+        </section>
+        <section>
+            <section>
+                <h2>so, what is a microservices</h2> 
+                <h2>architecture?</h2>
+                <img src="images/spirtoulis.png" alt="Brainy Smurf"/>
+            </section>
+            <section>
+                <h2>decomposing / modeling</h2>
+                <h2>of systems into services</h2>
+                <ul>
+                    <li class="fragment">
+                        provide a business functionality
+                    </li>
+                    <li class="fragment">
+                        isolated and autonomous
+                    </li>
+                    <li class="fragment">
+                        implemented and operated by individual teams
+                    </li>
+                </ul>
+                <p class="fragment">... individual releases</p>
+            </section>
+            <section>
+                <h2>what is the value of</h2>
+                <h2>microservices?</h2>
+                <ul>
+                    <li>
+                        individual release cycles<span class="fragment">-> velocity</span>
+                    </li>
+                    <li>
+                        autonomous <span class="fragment">-> agility</span>
+                    </li>
+
+                    <li>
+                        fine grained services <span class="fragment">-> testability</span>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>what are the drawbacks of</h2>
+                <h2>microservices?</h2>
+                <ul>
+                    <li class="fragment">
+                        distributed systems are <p class="fragment highlight-red" data-fragment-index="1">hard</p>
+                    </li>
+                    <li class="fragment">
+                        operations are complex
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>new challenges</h2>
+                <ul>
+                    <li class="fragment">
+                        discovery of services
+                    </li>
+                    <li class="fragment">
+                        monitoring/tracing distributing systems
+                    </li>
+                    <li class="fragment">
+                        testing complexity
+                    </li>
+                    <li class="fragment">
+                        delivery complexity
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <img src="images/docker-logo.png" alt="Docker Logo"/>
+            </section>
+            <section>
+                <h2>what is docker?</h2>
+
+                <p class="fragment">a containerization platform</p>
+                <ul>
+                    <li class="fragment">package your application</li>
+                    <li class="fragment">ship your application</li>
+                    <li class="fragment">run your application</li>
+                </ul>
+            </section>
+            <section>
+                <h2>docker examples</h2>
+                <p class="fragment">this presentation is running on docker</p>
+                <p class="fragment">let's hack a tiny `<a href="asciicasts/a-simple-vertx-app.html" target="_blank">hello world</a>` </p>
+                <p class="fragment">let's create a docker image for the`<a href="asciicasts/a-simple-vertx-app-dockerized.html" target="_blank">hello world</a>` </p>
+            </section>
+            <section>
+                <h2>docker vs vm</h2>
+                <img src="images/vm-vs-docker.png" alt="VMs vs Docker"/>
+            </section>
+            <section>
+                <h2>what to remember</h2>
+                <p>
+                <ul>
+                    <li>tiny footprint</li>
+                    <li>extremely fast</li>
+                    <li>reproducible behavior</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <img src="images/kubernetes.png" width="400" height="400" alt="Kubernetes Logo"/>
+            </section>
+            <section>
+                <h2>what is kubernetes?</h2>
+                <p class="fragment">a container platform</p>
+                <ul>
+                    <li class="fragment">deploy apps quickly and predictable</li>
+                    <li class="fragment">scale your application</li>
+                    <li class="fragment">roll-out new features easily</li>
+                </ul>
+            </section>
+            <section>
+                <h2>an overview</h2>
+                <img src="images/kubernetes-architecture.png" alt="Kubernetes Architecutre"/>
+            </section>
+            <section>
+                <h2>pod</h2>
+                <p>A group of containers</p>
+                <img src="images/pod.png" alt="Pod"/>
+                <p>share host</p>
+                <p>share volumes</p>
+            </section>
+            <section>
+                <h2>service</h2>
+                <img src="images/services.png" width="500" height="500" alt="Services"/>
+            </section>
+            <section>
+                <h2>replica set</h2>
+                <img src="images/replication-controller.png" alt="Replication Controller"/>
+                <p class="fragment">Optionally you can use Deployment to create the replica set</p>
+            </section>
+            <section>
+                <h2>time to digest... </h2>
+                <img src="images/cola.jpg" alt="A cola"/>
+            </section>
+            <section>
+                <h2>minikube</h2>
+                <p>a tool that makes it easy to run Kubernetes locally</p>
+                <p class="fragment">Let's see <a href="asciicasts/hello-minikube.html" target="_blank">minikube</a> in action!</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>the developer user story</h2>
+                <p>As a developer I want to start hacking code!</p>
+            </section>
+            <section>
+                <h2>fabric8 maven plugin</h2>
+                <p>automate image building</p>
+                <p>automate kubernetes resource generation</p>
+                <p>automate deployment</p>
+                <p class="fragment">Let's see <a href="asciicasts/fabric8-maven-plugin.html" target="_blank">f-m-p</a> in action!</p>
+            </section>
+            <section>
+                <h2>why spring?</h2>
+                <p class="fragment">it was the easiest to fit in an ascii-cast!</p>
+                <p class="fragment">spring-cloud-kubernetes</p>
+            </section>
+            <section>
+                <h2>what other options do I have?</h2>
+                <p class="fragment">Everything!</p>
+                <div class="fragment fade-in">
+                    <p>other popular choices are:</p>
+                    <ul>
+                        <li>Wildfly Swarm</li>
+                        <li>Dropwizzard</li>
+                        <li>Lagom</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <img src="images/arquillian-logo.png" alt="Arquillian Logo">
+            </section>
+            <section>
+                <h2>arquillian cube kubernetes</h2>
+                <ol>
+                    <li>creates a session</li>
+                    <li>deploys application</li>
+                    <li>waits for ready state</li>
+                    <li>run the test suite</li>
+                    <li>cleans up</li>
+                </ol>
+            </section>
+            <section>
+                <h2>what is a session?</h2>
+                <ul>
+                    <li>The interaction with Kubernetes</li>
+                    <li>Shares lifecycle with the test Suite</li>
+                    <li>Has a unique Kubernetes Namespace</li>
+                    <li>What happens in session stays in session</li>
+                </ul>
+            </section>
+            <section>
+                <h2>what can I do inside a test?</h2>
+                <ul>
+                    <li>Validate the deployment</li>
+                    <li>Interact with application</li>
+                </ul>
+            </section>
+            <section>
+                <h2>let's add test to our app</h2>
+            </section>
+            <section>
+                <h2>troubleshooting</h2>
+            </section>
+            <section>
+                <h2>circuit breakers</h2>
+                <p>how to handle an unresponsive service?</p>
+                <p>fail fast?</p>
+                <p>fallback?</p>
+                 <img class="fragment" src="images/hystrix-logo.png" alt="Hystrix"/>
+            </section>
+            <section>
+                <h2>distributed tracing</h2>
+                <p>how do we troubleshoot latency issues?</p>
+                <p>how do we detect bottlenecks?</p>
+                <img class="fragment" src="images/zipkin-logo.jpg" alt="Zipkin"/>
+            </section>
+            <section>
+                <h2>ci/cd</h2>
+                <p>A somewhat more advanced topic...</p>
+            </section>
+        </section>
+        <section>
+            <h2>resources</h2>
+            <img src="images/ms-for-java-devs.png" alt="Microservices for Java Developers"/>
+        </section>
+        <section>
+            <h2>more resources</h2>
+            <ul>
+                <li>https://github.com/prometheus/prometheus</li>
+                <li>https://github.com/fabric8io/kubeflix</li>
+                <li>https://github.com/fabric8io/kubernetes-zipkin</li>
+            </ul>
+        </section>
+        <section>
+            <h2>this presentations</h2>
+            <ul>
+                <li>https://github.com/iocanel/voxxedthess2016</li>
+                <li>https://hub.docker.com/r/iocanel/voxxed-thess</li>
+            </ul>
+        </section>
+        <section>
+            <h2>questions?</h2>
+        </section>
+        <section>
+            <h2>the end</h2>
+        </section>
+
+    </div>
+    <footer style="display:none;">
+        <div style="float:center;">Ioannis Canellos - Voxxed Thessaloniki 2016</div>
+    </footer>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'footer.reveal.js', condition: function () {
+                return !!document.querySelector('footer');
+            }
+            }
+
+        ]
+    });
+
+</script>
+
+</body>
+</html>

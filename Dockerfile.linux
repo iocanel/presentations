@@ -1,0 +1,8 @@
+FROM centos:7
+
+RUN yum install -y docker-1.6.0 golang-1.4.2 make
+
+COPY . /image
+WORKDIR /image
+
+CMD ["make", "build", "package"]

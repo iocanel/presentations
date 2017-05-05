@@ -1,0 +1,1958 @@
+{
+  "height": 24,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "command": "/usr/bin/zsh --login",
+  "version": 1,
+  "stdout": [
+    [
+      0.490467,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.000864,
+      "\u001b]7;file://istation/home/iocanel/voxxed\u0007"
+    ],
+    [
+      5.2e-05,
+      "\u001b]2;iocanel@istation: ~/voxxed\u0007\u001b]1;~/voxxed\u0007"
+    ],
+    [
+      0.048101,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[168C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[171D"
+    ],
+    [
+      2.4e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      6.2e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.22287,
+      "s\u001b[90mpring init --dependencies=web,actuator --language=groovy voxxed-thess --groupId=iocanel --version=2016\u001b[39m\u001b[102D"
+    ],
+    [
+      0.087503,
+      "\bs\u001b[39mp"
+    ],
+    [
+      0.167914,
+      "\u001b[39mr"
+    ],
+    [
+      0.095705,
+      "\u001b[39mi"
+    ],
+    [
+      0.208234,
+      "\u001b[39mn"
+    ],
+    [
+      0.064303,
+      "\u001b[39mg"
+    ],
+    [
+      0.159354,
+      "\u001b[39m "
+    ],
+    [
+      0.611915,
+      "\u001b[39mi\u001b[39mn\u001b[39mi\u001b[39mt\u001b[39m \u001b[39m-\u001b[39m-\u001b[39md\u001b[39me\u001b[39mp\u001b[39me\u001b[39mn\u001b[39md\u001b[39me\u001b[39mn\u001b[39mc\u001b[39mi\u001b[39me\u001b[39ms\u001b[39m=\u001b[39mw\u001b[39me\u001b[39mb\u001b[39m,\u001b[39ma\u001b[39mc\u001b[39mt\u001b[39mu\u001b[39ma\u001b[39mt\u001b[39mo\u001b[39mr\u001b[39m \u001b[39m-\u001b[39m-\u001b[39ml\u001b[39ma\u001b[39mn\u001b[39mg\u001b[39mu\u001b[39ma\u001b[39mg\u001b[39me\u001b[39m=\u001b[39mg\u001b[39mr\u001b[39mo\u001b[39mo\u001b[39mv\u001b[39my\u001b[39m \u001b[39mv\u001b[39mo\u001b[39mx\u001b[39mx\u001b[39me\u001b[39md\u001b[39m-\u001b[39mt\u001b[39mh\u001b[39me\u001b[39ms\u001b[39ms\u001b[39m \u001b[39m-\u001b[39m-\u001b[39mg\u001b[39mr\u001b[39mo\u001b[39mu\u001b[39mp\u001b[39mI\u001b[39md\u001b[39m=\u001b[39mi\u001b[39mo\u001b[39mc\u001b[39ma\u001b[39mn\u001b[39me\u001b[39ml\u001b[39m \u001b[39m-\u001b[39m-\u001b[39mv\u001b[39me\u001b[39mr\u001b[39ms\u001b[39mi\u001b[39mo\u001b[39mn\u001b[39m=\u001b[39m2\u001b[39m0\u001b[39m1\u001b[39m6"
+    ],
+    [
+      0.463875,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000967,
+      "\u001b]2;spring init --dependencies=web,actuator --language=groovy voxxed-thess  \u0007\u001b]1;spring\u0007"
+    ],
+    [
+      0.204274,
+      "Using service at https://start.spring.io\r\n"
+    ],
+    [
+      3.484808,
+      "Project extracted to '/home/iocanel/voxxed/voxxed-thess'\r\n"
+    ],
+    [
+      0.008831,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001065,
+      "\u001b]7;file://istation/home/iocanel/voxxed\u0007"
+    ],
+    [
+      0.000117,
+      "\u001b]2;iocanel@istation: ~/voxxed\u0007\u001b]1;~/voxxed\u0007"
+    ],
+    [
+      0.046406,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[168C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[171D"
+    ],
+    [
+      3.1e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      2.137515,
+      "c\u001b[90mlear\u001b[39m\b\b\b\b"
+    ],
+    [
+      0.072089,
+      "\bc\u001b[39md\u001b[90m \u001b[90m.\u001b[90m.\u001b[39m\b\b\b"
+    ],
+    [
+      0.127861,
+      "\u001b[39m "
+    ],
+    [
+      1.280553,
+      "\u001b[39mv\u001b[90mo\u001b[90mxxed-thess\u001b[39m\u001b[11D"
+    ],
+    [
+      0.047549,
+      "\u001b[39mo"
+    ],
+    [
+      0.470849,
+      "\u001b[39mx\u001b[39mx\u001b[39me\u001b[39md\u001b[39m-\u001b[39mt\u001b[39mh\u001b[39me\u001b[39ms\u001b[39ms"
+    ],
+    [
+      0.301004,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000531,
+      "\u001b]2;cd voxxed-thess\u0007\u001b]1;cd\u0007"
+    ],
+    [
+      0.000102,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001313,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      0.000108,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.045234,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      1.9e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      9e-06,
+      "\u001b[?2004h"
+    ],
+    [
+      1.508563,
+      "m\u001b[90minikube dashboard\u001b[39m\u001b[17D"
+    ],
+    [
+      0.064605,
+      "\bm\u001b[39mv\u001b[90mn\u001b[90m \u001b[90mf\u001b[90ma\u001b[90mb\u001b[90mr\u001b[90mi\u001b[90mc\u001b[90m8\u001b[90m:\u001b[90mu\u001b[90mn\u001b[90md\u001b[90me\u001b[90mp\u001b[90ml\u001b[90moy\u001b[39m\u001b[18D"
+    ],
+    [
+      0.127723,
+      "\u001b[39mn"
+    ],
+    [
+      0.127781,
+      "\u001b[39m "
+    ],
+    [
+      0.272198,
+      "\u001b[39mi\u001b[90mo\u001b[90m.\u001b[90mf\u001b[90ma\u001b[90mb\u001b[90mr\u001b[90mi\u001b[90mc\u001b[90m8\u001b[90m:\u001b[90mf\u001b[90ma\u001b[90mb\u001b[90mr\u001b[90mi\u001b[90mc8-maven-plugin:3.1.74:setup\u001b[39m\u001b[43D"
+    ],
+    [
+      0.063904,
+      "\u001b[39mo"
+    ],
+    [
+      0.71564,
+      "\u001b[39m.\u001b[39mf\u001b[39ma\u001b[39mb\u001b[39mr\u001b[39mi\u001b[39mc\u001b[39m8\u001b[39m:\u001b[39mf\u001b[39ma\u001b[39mb\u001b[39mr\u001b[39mi\u001b[39mc\u001b[39m8\u001b[39m-\u001b[39mm\u001b[39ma\u001b[39mv\u001b[39me\u001b[39mn\u001b[39m-\u001b[39mp\u001b[39ml\u001b[39mu\u001b[39mg\u001b[39mi\u001b[39mn\u001b[39m:\u001b[39m3\u001b[39m.\u001b[39m1\u001b[39m.\u001b[39m7\u001b[39m4\u001b[39m:\u001b[39ms\u001b[39me\u001b[39mt\u001b[39mu\u001b[39mp"
+    ],
+    [
+      1.343775,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.00078,
+      "\u001b]2;mvn io.fabric8:fabric8-maven-plugin:3.1.74:setup\u0007\u001b]1;mvn\u0007"
+    ],
+    [
+      0.765157,
+      "[INFO] Scanning for projects...\r\n"
+    ],
+    [
+      0.213543,
+      "[INFO]                                                                         \r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      3.6e-05,
+      "[INFO] Building demo 2016\r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      0.002018,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:setup (default-cli) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.860105,
+      "[INFO] Updating the pom /home/iocanel/voxxed/voxxed-thess/pom.xml\r\n"
+    ],
+    [
+      0.021765,
+      "[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      2.8e-05,
+      "[INFO] BUILD SUCCESS\r\n"
+    ],
+    [
+      2.3e-05,
+      "[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      0.000154,
+      "[INFO] Total time: 1.115 s\r\n"
+    ],
+    [
+      0.000202,
+      "[INFO] Finished at: 2016-10-18T22:41:16+03:00\r\n"
+    ],
+    [
+      0.12603,
+      "[INFO] Final Memory: 42M/1981M\r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      0.058145,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001189,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      8e-05,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.045792,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      4.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      3.677749,
+      "v\u001b[90mi src/main/groovy/com/example/HelloThess.groovy \u001b[39m\u001b[48D"
+    ],
+    [
+      0.055735,
+      "\bv\u001b[39mi"
+    ],
+    [
+      0.707395,
+      "\u001b[39m \u001b[39ms\u001b[39mr\u001b[39mc\u001b[39m/\u001b[39mm\u001b[39ma\u001b[39mi\u001b[39mn\u001b[39m/\u001b[39mg\u001b[39mr\u001b[39mo\u001b[39mo\u001b[39mv\u001b[39my\u001b[39m/\u001b[39mc\u001b[39mo\u001b[39mm\u001b[39m/\u001b[39me\u001b[39mx\u001b[39ma\u001b[39mm\u001b[39mp\u001b[39ml\u001b[39me\u001b[39m/\u001b[39mH\u001b[39me\u001b[39ml\u001b[39ml\u001b[39mo\u001b[39mT\u001b[39mh\u001b[39me\u001b[39ms\u001b[39ms\u001b[39m.\u001b[39mg\u001b[39mr\u001b[39mo\u001b[39mo\u001b[39mv\u001b[39my\u001b[39m "
+    ],
+    [
+      0.295624,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000753,
+      "\u001b]2;vim src/main/groovy/com/example/HelloThess.groovy\u0007\u001b]1;vi\u0007"
+    ],
+    [
+      0.135966,
+      "\u001b[?1049h\u001b[?1h\u001b=\u001b[2;1H▽\u001b[6n\u001b[2;1H  \u001b[1;1H\u001b]11;?\u0007"
+    ],
+    [
+      0.000566,
+      "\u001b[1;24r\u001b[?12;25h\u001b[?12l\u001b[?25h\u001b[27m\u001b[23m\u001b[m\u001b[H\u001b[2J\u001b[?25l\u001b[24;1H\"src/main/groovy/com/example/HelloThess.groovy\" [New File]"
+    ],
+    [
+      0.014885,
+      "\u001b[>c"
+    ],
+    [
+      0.000742,
+      "\u001b[2;1H\u001b[94m~                                                                                                                                                                                                     \u001b[3;1H~                                                                                                                                                                                                     \u001b[4;1H~                                                                                                                                                                                                     \u001b[5;1H~                                                                                                                                                                                                     \u001b[6;1H~                                                                                                                                                                                                    "
+    ],
+    [
+      2e-05,
+      " \u001b[7;1H~                                                                                                                                                                                                     \u001b[8;1H~                                                                                                                                                                                                     \u001b[9;1H~                                                                                                                                                                                                     \u001b[10;1H~                                                                                                                                                                                                     \u001b[11;1H~                                                                                                                                                                                                     \u001b"
+    ],
+    [
+      1.3e-05,
+      "[12;1H~                                                                                                                                                                                                     \u001b[13;1H~                                                                                                                                                                                                     \u001b[14;1H~                                                                                                                                                                                                     \u001b[15;1H~                                                                                                                                                                                                     \u001b[16;1H~                                                                                                                                                                                                     "
+    ],
+    [
+      1.2e-05,
+      "\u001b[17;1H~                                                                                                                                                                                                     \u001b[18;1H~                                                                                                                                                                                                     \u001b[19;1H~                                                                                                                                                                                                     \u001b[20;1H~                                                                                                                                                                                                     \u001b[21;1H~                                                                                                                                                                                                  "
+    ],
+    [
+      0.002396,
+      "   \u001b[22;1H~                                                                                                                                                                                                     \u001b[m\u001b[23;1H\u001b[1m\u001b[38;5;22m\u001b[48;5;148m NORMAL \u001b[m\u001b[38;5;148m\u001b[48;5;240m\u001b[23;10H \u001b[m\u001b[38;5;250m\u001b[48;5;240msrc/main/groovy/com/example/\u001b[m\u001b[1m\u001b[38;5;231m\u001b[48;5;240mHelloThess.groovy \u001b[m\u001b[38;5;240m\u001b[48;5;236m\u001b[23;58H \u001b[m\u001b[38;5;231m\u001b[48;5;236m                                                                                                            \u001b[m\u001b[38;5;247m\u001b[48;5;236munix\u001b[m\u001b[38;5;244m\u001b[48;5;236m \u001b[m\u001b[23;173H\u001b[38;5;247m\u001b[48;5;236m groovy\u001b[m\u001b[38;5;240m\u001b[48;5;236m \u001b[m\u001b[23;182H\u001b[38;5;247m\u001b[48;5;240m 100%\u001b[m\u001b[38;5;252m\u001b[48;5;240m \u001b[m\u001b[23;189H\u001b[38;5;235m\u001b[48;5;252m \u001b[23;191H \u001b[m\u001b[1m\u001b[38;5;235m\u001b[48;5;252m  1\u001b[m\u001b[38;5;22m\u001b[48;5;252m:1  \u001b[1;1H"
+    ],
+    [
+      0.004943,
+      "\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.00327,
+      "\u001bP+q436f\u001b\\\u001bP+q6b75\u001b\\\u001bP+q6b64\u001b\\\u001bP+q6b72\u001b\\\u001bP+q6b6c\u001b\\\u001bP+q2332\u001b\\\u001bP+q2334\u001b\\\u001bP+q2569\u001b\\\u001bP+q2a37\u001b\\\u001bP+q6b31\u001b\\"
+    ],
+    [
+      1.740124,
+      "\u001b[?25l\u001b[m\u001b[24;1H\u001b[1m-- INSERT --\u001b[m\u001b[24;13H\u001b[K"
+    ],
+    [
+      0.00619,
+      "\u001b[23;1H\u001b[1m\u001b[38;5;23m\u001b[48;5;231m INSERT \u001b[m\u001b[38;5;148m\u001b[48;5;240m\u001b[m\u001b[23;9H\u001b[38;5;231m\u001b[48;5;31m\u001b[23;10H \u001b[m\u001b[38;5;117m\u001b[48;5;31msrc/main/groovy/com/example/\u001b[m\u001b[1m\u001b[38;5;231m\u001b[48;5;31mHelloThess.groovy \u001b[m\u001b[38;5;240m\u001b[48;5;236m\u001b[m\u001b[23;57H\u001b[38;5;31m\u001b[48;5;24m\u001b[23;58H \u001b[m\u001b[38;5;231m\u001b[48;5;24m                                                                                                            \u001b[m\u001b[38;5;117m\u001b[48;5;24munix\u001b[m\u001b[38;5;74m\u001b[48;5;24m \u001b[m\u001b[23;173H\u001b[38;5;117m\u001b[48;5;24m groovy\u001b[m\u001b[38;5;31m\u001b[48;5;24m \u001b[m\u001b[23;182H\u001b[38;5;250m\u001b[48;5;31m 100%\u001b[m\u001b[38;5;117m\u001b[48;5;31m \u001b[m\u001b[23;189H\u001b[38;5;24m\u001b[48;5;117m \u001b[23;191H \u001b[m\u001b[1m\u001b[38;5;24m\u001b[48;5;117m  1\u001b[m\u001b[38;5;22m\u001b[48;5;252m:\u001b[m\b\u001b[38;5;22m\u001b[48;5;117m:1  \u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.932338,
+      "\u001b[?25l\u001b[m\u001b[35mpackage\u001b[m com.example\u001b[2;1H\u001b[K\u001b[3;1H\u001b[35mimport\u001b[m org.springframework.web.bind.annotation.*\u001b[3;49H\u001b[K\u001b[4;1H\u001b[K\u001b[5;1H@RestController\u001b[5;16H\u001b[K\u001b[6;1H\u001b[32mclass\u001b[m HelloThess {\u001b[6;19H\u001b[K\u001b[7;1H  @RequestMapping(\u001b[31m\"/\"\u001b[m)\u001b[7;23H\u001b[K\u001b[8;1H  \u001b[32mString\u001b[m hello() {\u001b[8;19H\u001b[K\u001b[9;1H    \u001b[31m\"Hello Thessaloniki using Spring!\"\u001b[m\u001b[9;39H\u001b[K\u001b[10;1H  }\u001b[10;4H\u001b[K\u001b[11;1H}\u001b[11;2H\u001b[K\u001b[12;1H\u001b[K\u001b[23;56H\u001b[1m\u001b[38;5;220m\u001b[48;5;31m + \u001b[m\u001b[38;5;31m\u001b[48;5;24m\u001b[23;60H \u001b[m\u001b[132C\u001b[1m\u001b[38;5;24m\u001b[48;5;117m12\u001b[m\u001b[38;5;22m\u001b[48;5;117m:\u001b[12;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.686257,
+      "\u001b[m\u001b[24;1H\u001b[K\u001b[12;1H"
+    ],
+    [
+      0.510857,
+      "\u001b[?25l"
+    ],
+    [
+      0.002806,
+      "\u001b[23;1H\u001b[1m\u001b[38;5;22m\u001b[48;5;148m NORMAL \u001b[m\u001b[38;5;231m\u001b[48;5;31m\u001b[m\u001b[23;9H\u001b[38;5;148m\u001b[48;5;240m\u001b[23;10H \u001b[m\u001b[38;5;250m\u001b[48;5;240msrc/main/groovy/com/example/\u001b[m\u001b[1m\u001b[38;5;231m\u001b[48;5;240mHelloThess.groovy\u001b[m\u001b[1m\u001b[38;5;220m\u001b[48;5;31m \u001b[m\b\u001b[1m\u001b[38;5;220m\u001b[48;5;240m + \u001b[m\u001b[38;5;31m\u001b[48;5;24m\u001b[m\u001b[23;59H\u001b[38;5;240m\u001b[48;5;236m\u001b[23;60H \u001b[m\u001b[38;5;231m\u001b[48;5;236m                                                                                                          \u001b[m\u001b[38;5;247m\u001b[48;5;236munix\u001b[m\u001b[38;5;244m\u001b[48;5;236m \u001b[m\u001b[23;173H\u001b[38;5;247m\u001b[48;5;236m groovy\u001b[m\u001b[38;5;240m\u001b[48;5;236m \u001b[m\u001b[23;182H\u001b[38;5;247m\u001b[48;5;240m 100%\u001b[m\u001b[38;5;252m\u001b[48;5;240m \u001b[m\u001b[23;189H\u001b[38;5;235m\u001b[48;5;252m \u001b[23;191H \u001b[m\u001b[1m\u001b[38;5;235m\u001b[48;5;252m 12\u001b[m\u001b[38;5;22m\u001b[48;5;117m:\u001b[m\b\u001b[38;5;22m\u001b[48;5;252m:1  \u001b[12;1H\u001b[?12l\u001b[?25h\u001b[?25l\u001b[24;1H\u001b[m:\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.381306,
+      "w\u001b[?25l\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.095951,
+      "q\u001b[?25l\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.91992,
+      "\r"
+    ],
+    [
+      3.9e-05,
+      "\u001b[?25l"
+    ],
+    [
+      5.1e-05,
+      "\"src/main/groovy/com/example/HelloThess.groovy\""
+    ],
+    [
+      0.009414,
+      " [New] 12L, 194C written"
+    ],
+    [
+      0.00528,
+      "\r\r\r\n\u001b[?1l\u001b>\u001b[?12l\u001b[?25h\u001b[?1049l"
+    ],
+    [
+      0.001449,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001318,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      0.000116,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.048314,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      3e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      3.490779,
+      "m\u001b[90mvn io.fabric8:fabric8-maven-plugin:3.1.74:setup\u001b[39m\u001b[47D"
+    ],
+    [
+      0.087909,
+      "\bm\u001b[39mv"
+    ],
+    [
+      0.144052,
+      "\u001b[39mn"
+    ],
+    [
+      0.10397,
+      "\u001b[39m "
+    ],
+    [
+      0.178379,
+      "\u001b[39mc\u001b[90ml\u001b[90me\u001b[90ma\u001b[90mn\u001b[90m \u001b[90mp\u001b[90ma\u001b[90mc\u001b[90mk\u001b[90ma\u001b[90mg\u001b[90me\u001b[90m \u001b[90mf\u001b[90ma\u001b[90mb\u001b[90mr\u001b[90mi\u001b[90mc\u001b[90m8\u001b[90m:\u001b[90mb\u001b[90mu\u001b[90mi\u001b[90ml\u001b[90md\u001b[90m \u001b[90mf\u001b[90ma\u001b[90mb\u001b[90mr\u001b[90mi\u001b[90mc\u001b[90m8\u001b[90m:\u001b[90md\u001b[90me\u001b[90mp\u001b[90ml\u001b[90mo\u001b[90my\u001b[90m \u001b[90mf\u001b[90mabric8:start\u001b[39m\u001b[55D"
+    ],
+    [
+      0.004895,
+      "\u001b[39ml"
+    ],
+    [
+      0.184742,
+      "\u001b[39me"
+    ],
+    [
+      0.152275,
+      "\u001b[39ma"
+    ],
+    [
+      0.071665,
+      "\u001b[39mn"
+    ],
+    [
+      0.755508,
+      "\u001b[39m \u001b[39mp\u001b[39ma\u001b[39mc\u001b[39mk\u001b[39ma\u001b[39mg\u001b[39me\u001b[39m \u001b[39mf\u001b[39ma\u001b[39mb\u001b[39mr\u001b[39mi\u001b[39mc\u001b[39m8\u001b[39m:\u001b[39mb\u001b[39mu\u001b[39mi\u001b[39ml\u001b[39md\u001b[39m \u001b[39mf\u001b[39ma\u001b[39mb\u001b[39mr\u001b[39mi\u001b[39mc\u001b[39m8\u001b[39m:\u001b[39md\u001b[39me\u001b[39mp\u001b[39ml\u001b[39mo\u001b[39my\u001b[39m \u001b[39mf\u001b[39ma\u001b[39mb\u001b[39mr\u001b[39mi\u001b[39mc\u001b[39m8\u001b[39m:\u001b[39ms\u001b[39mt\u001b[39ma\u001b[39mr\u001b[39mt"
+    ],
+    [
+      1.160092,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.00058,
+      "\u001b]2;mvn clean package fabric8:build fabric8:deploy fabric8:start\u0007\u001b]1;mvn\u0007"
+    ],
+    [
+      0.81428,
+      "[INFO] Scanning for projects...\r\n"
+    ],
+    [
+      0.250855,
+      "[INFO]                                                                         \r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      5e-05,
+      "[INFO] Building demo 2016\r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      0.193149,
+      "[INFO] \r\n[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.04448,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.128646,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addTestSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.001032,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:generateStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.113097,
+      "[INFO] Using Groovy 2.4.7 to perform generateStubs.\r\n"
+    ],
+    [
+      0.118463,
+      "[INFO] Generated 2 stubs.\r\n"
+    ],
+    [
+      0.000466,
+      "[INFO] \r\n[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ voxxed-thess ---"
+    ],
+    [
+      1.8e-05,
+      "\r\n"
+    ],
+    [
+      0.068696,
+      "[INFO] Using 'UTF-8' encoding to copy filtered resources.\r\n"
+    ],
+    [
+      0.001947,
+      "[INFO] Copying 1 resource\r\n"
+    ],
+    [
+      0.006516,
+      "[INFO] Copying 0 resource\r\n"
+    ],
+    [
+      0.000133,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:resource (fmp) @ voxxed-thess ---\r\n"
+    ],
+    [
+      1.461733,
+      "[INFO] \u001b[32mF8: Running in \u001b[34mKubernetes\u001b[32m mode\u001b[m\r\n"
+    ],
+    [
+      0.020651,
+      "[INFO] \u001b[32mF8: spring-boot: Using fat jar packaging as the spring boot plugin is using `repackage` goal execution\u001b[m\r\n"
+    ],
+    [
+      2.3e-05,
+      "[INFO] \u001b[32mF8: Running generator spring-boot\u001b[m\r\n"
+    ],
+    [
+      0.118981,
+      "2016-10-18 22:41:45 INFO  Version:30 - HV000001: Hibernate Validator 5.2.4.Final\r\n"
+    ],
+    [
+      0.303905,
+      "[INFO] \u001b[32mF8: fmp-controller: Adding a default Deployment\u001b[m\r\n"
+    ],
+    [
+      0.048429,
+      "[INFO] \u001b[32mF8: fmp-service: Adding a default Service with ports [8080]\u001b[m\r\n"
+    ],
+    [
+      0.030125,
+      "[INFO] \u001b[32mF8: fabric8-expose: Adding Service label `expose:true` on service voxxed-thess so that it is exposed by the exposecontroller microservice. To disable use the maven argument: `-Dfabric8.profile=internal-microservice`\u001b[m\r\n"
+    ],
+    [
+      0.003057,
+      "[WARNING] \u001b[33mF8: No .git/config file could be found so cannot annotate kubernetes resources with git commit SHA and branch\u001b[m\r\n"
+    ],
+    [
+      0.009751,
+      "[WARNING] \u001b[33mF8: No .git/config file could be found so cannot annotate kubernetes resources with git commit SHA and branch\u001b[m\r\n"
+    ],
+    [
+      0.537225,
+      "[INFO] \r\n[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.084645,
+      "[INFO] Changes detected - recompiling the module!\r\n"
+    ],
+    [
+      0.004309,
+      "[INFO] Compiling 2 source files to /home/iocanel/voxxed/voxxed-thess/target/classes\r\n"
+    ],
+    [
+      0.401233,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:compile (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.107188,
+      "[INFO] Using Groovy 2.4.7 to perform compile.\r\n"
+    ],
+    [
+      0.159283,
+      "[INFO] Compiled 2 files.\r\n"
+    ],
+    [
+      0.000118,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:removeStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000999,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:testGenerateStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.092831,
+      "[INFO] Using Groovy 2.4.7 to perform testGenerateStubs.\r\n"
+    ],
+    [
+      0.101418,
+      "[INFO] Generated 2 stubs.\r\n"
+    ],
+    [
+      0.000261,
+      "[INFO] \r\n[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.001512,
+      "[INFO] Using 'UTF-8' encoding to copy filtered resources.\r\n"
+    ],
+    [
+      1.5e-05,
+      "[INFO] skip non existing resourceDirectory /home/iocanel/voxxed/voxxed-thess/src/test/resources\r\n"
+    ],
+    [
+      0.000103,
+      "[INFO] \r\n[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.00223,
+      "[INFO] Changes detected - recompiling the module!\r\n"
+    ],
+    [
+      0.000175,
+      "[INFO] Compiling 1 source file to /home/iocanel/voxxed/voxxed-thess/target/test-classes\r\n"
+    ],
+    [
+      0.033813,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:testCompile (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.092752,
+      "[INFO] Using Groovy 2.4.7 to perform testCompile.\r\n"
+    ],
+    [
+      0.146863,
+      "[INFO] Compiled 1 file.\r\n"
+    ],
+    [
+      0.000143,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:removeTestStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.00089,
+      "[INFO] \r\n[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.056962,
+      "[INFO] Surefire report directory: /home/iocanel/voxxed/voxxed-thess/target/surefire-reports\r\n"
+    ],
+    [
+      0.063205,
+      "\r\n-------------------------------------------------------\r\n"
+    ],
+    [
+      4.1e-05,
+      " T E S T S\r\n"
+    ],
+    [
+      2.3e-05,
+      "-------------------------------------------------------\r\n"
+    ],
+    [
+      0.257642,
+      "22:41:47.772 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      2.9e-05,
+      "22:41:47.778 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]\r\n"
+    ],
+    [
+      4.4e-05,
+      "22:41:47.785 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [pu"
+    ],
+    [
+      1.9e-05,
+      "blic org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]\r\n"
+    ],
+    [
+      0.010516,
+      "22:41:47.798 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]\r\n"
+    ],
+    [
+      0.009092,
+      "22:41:47.807 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.DemoApplicationTests], using SpringBootContextLoader\r\n"
+    ],
+    [
+      0.002633,
+      "22:41:47.810 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.DemoApplicationTests]: class path resource [com/example/DemoApplicationTests-context.xml] does not exist\r\n"
+    ],
+    [
+      0.000143,
+      "22:41:47.810 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.DemoApplicationTests]: class path resource [com/example/DemoApplicationTestsContext.groovy] does not exist\r\n"
+    ],
+    [
+      8.3e-05,
+      "22:41:47.810 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.\r\n"
+    ],
+    [
+      0.000486,
+      "22:41:47.810 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default "
+    ],
+    [
+      1e-05,
+      "configuration classes for test class [com.example.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\r\n"
+    ],
+    [
+      0.024939,
+      "22:41:47.835 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.031141,
+      "22:41:47.866 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence\r\n"
+    ],
+    [
+      0.000824,
+      "22:41:47.867 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence\r\n"
+    ],
+    [
+      0.000146,
+      "22:41:47.868 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]\r\n"
+    ],
+    [
+      0.007282,
+      "22:41:47.875 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/example/] to resources [URL [file:/home/iocanel/voxxed/voxxed-thess/target/test-classes/com/example/], URL [file:/home/iocanel/voxxed/voxxed-thess/target/classes/com/example/]]\r\n"
+    ],
+    [
+      0.000224,
+      "22:41:47.875 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/iocanel/voxxed/voxxed-thess/target/test-classes/com/example]\r\n"
+    ],
+    [
+      0.000127,
+      "22:41:47.875 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/i"
+    ],
+    [
+      1.6e-05,
+      "ocanel/voxxed/voxxed-thess/target/test-classes/com/example] for files matching pattern [/home/iocanel/voxxed/voxxed-thess/target/test-classes/com/example/*.class]\r\n"
+    ],
+    [
+      0.002789,
+      "22:41:47.878 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/iocanel/voxxed/voxxed-thess/target/classes/com/example]\r\n"
+    ],
+    [
+      3.6e-05,
+      "22:41:47.878 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/i"
+    ],
+    [
+      1.7e-05,
+      "ocanel/voxxed/voxxed-thess/target/classes/com/example] for files matching pattern [/home/iocanel/voxxed/voxxed-thess/target/classes/com/example/*.class]\r\n"
+    ],
+    [
+      0.000587,
+      "22:41:47.879 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/example/*.class] to resources [file [/home/iocanel/voxxed/voxxed-thess/target/test-classes/com/example/DemoApplica"
+    ],
+    [
+      1.3e-05,
+      "tionTests.class], file [/home/iocanel/voxxed/voxxed-thess/target/classes/com/example/DemoApplication.class], file [/home/iocanel/voxxed/voxxed-thess/target/classes/com/example/HelloThess.class]]\r\n"
+    ],
+    [
+      0.040379,
+      "22:41:47.919 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/iocanel/voxxed/voxxed-thess/target/classes/com/example/DemoApplication.class]\r\n"
+    ],
+    [
+      0.007218,
+      "22:41:47.926 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.DemoApplication for test class com.example.DemoApplicationTests\r\n"
+    ],
+    [
+      0.002394,
+      "22:41:47.929 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.DemoApplicationTests]: using defaults.\r\n"
+    ],
+    [
+      0.002301,
+      "22:41:47.931 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionL"
+    ],
+    [
+      2.1e-05,
+      "istener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure"
+    ],
+    [
+      1.4e-05,
+      ".restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestEx"
+    ],
+    [
+      1.2e-05,
+      "ecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.spr"
+    ],
+    [
+      2.5e-05,
+      "ingframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTes"
+    ],
+    [
+      0.001427,
+      "tExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]\r\n"
+    ],
+    [
+      0.005077,
+      "22:41:47.937 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transa"
+    ],
+    [
+      1.7e-05,
+      "ction/TransactionDefinition]\r\n"
+    ],
+    [
+      0.000816,
+      "22:41:47.938 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make "
+    ],
+    [
+      2.2e-05,
+      "the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]\r\n"
+    ],
+    [
+      0.003418,
+      "22:41:47.942 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4206a205, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@29ba4338, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExe"
+    ],
+    [
+      3.9e-05,
+      "cutionListener@57175e74, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7bb58ca3, org.springframew"
+    ],
+    [
+      1.4e-05,
+      "ork.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c540f5a, org.springframework.boot.test.autoconfigure.web.clie"
+    ],
+    [
+      2.1e-05,
+      "nt.MockRestServiceServerResetTestExecutionListener@770c2e6b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionL"
+    ],
+    [
+      1.2e-05,
+      "istener@1a052a00, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4d826d77, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@61009542, org.springframework.boot.test.autoconfigure"
+    ],
+    [
+      1.7e-05,
+      ".web.servlet.WebDriverTestExecutionListener@77e9807f]\r\n"
+    ],
+    [
+      0.002176,
+      "22:41:47.944 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.00029,
+      "22:41:47.944 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.002542,
+      "Running com.example.DemoApplicationTests\r\n"
+    ],
+    [
+      4.4e-05,
+      "22:41:47.946 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      7.2e-05,
+      "22:41:47.946 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]\r\n"
+    ],
+    [
+      4.6e-05,
+      "22:41:47.946 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwar"
+    ],
+    [
+      1e-05,
+      "eContextLoaderDelegate)]\r\n"
+    ],
+    [
+      4.5e-05,
+      "22:41:47.947 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class"
+    ],
+    [
+      1e-05,
+      " [com.example.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]\r\n"
+    ],
+    [
+      3.4e-05,
+      "22:41:47.947 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration"
+    ],
+    [
+      1.3e-05,
+      " nor @ContextHierarchy found for test class [com.example.DemoApplicationTests], using SpringBootContextLoader\r\n"
+    ],
+    [
+      0.000323,
+      "22:41:47.947 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.DemoApplicationTests]: class path resource [com/example/DemoApplicationTests-context.xml] does not exist\r\n"
+    ],
+    [
+      0.000205,
+      "22:41:47.948 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource locat"
+    ],
+    [
+      1e-05,
+      "ion for test class [com.example.DemoApplicationTests]: class path resource [com/example/DemoApplicationTestsContext.groovy] does not exist\r\n"
+    ],
+    [
+      0.000111,
+      "22:41:47.948 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.\r\n"
+    ],
+    [
+      0.000108,
+      "22:41:47.948 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default "
+    ],
+    [
+      1.2e-05,
+      "configuration classes for test class [com.example.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\r\n"
+    ],
+    [
+      0.005367,
+      "22:41:47.953 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.000903,
+      "22:41:47.954 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence\r\n"
+    ],
+    [
+      0.000101,
+      "22:41:47.954 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence\r\n"
+    ],
+    [
+      0.000148,
+      "22:41:47.954 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]\r\n"
+    ],
+    [
+      0.000107,
+      "22:41:47.955 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.DemoApplication for test class com.example.DemoApplicationTests\r\n"
+    ],
+    [
+      0.002235,
+      "22:41:47.957 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.DemoApplicationTests]: using defaults.\r\n"
+    ],
+    [
+      0.001761,
+      "22:41:47.958 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.spr"
+    ],
+    [
+      1.4e-05,
+      "ingframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecu"
+    ],
+    [
+      9e-06,
+      "tionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]\r\n"
+    ],
+    [
+      0.002269,
+      "22:41:47.961 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/TransactionDefinition]\r\n"
+    ],
+    [
+      0.000359,
+      "22:41:47.961 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make "
+    ],
+    [
+      1.6e-05,
+      "the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]\r\n"
+    ],
+    [
+      0.000273,
+      "22:41:47.961 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e50a6f6, org.springframework.test.context.support.DirtiesCon"
+    ],
+    [
+      2.5e-05,
+      "textBeforeModesTestExecutionListener@14ec4505, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@53ca01a2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@358c99f5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3ee0fea4, org.springframework.boot.test.autoconfigure.web.clie"
+    ],
+    [
+      1.3e-05,
+      "nt.MockRestServiceServerResetTestExecutionListener@48524010, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b168fa9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1a84f40f, org.springframework.boot.tes"
+    ],
+    [
+      2.2e-05,
+      "t.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23282c25, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7920ba90]\r\n"
+    ],
+    [
+      3.9e-05,
+      "22:41:47.962 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      5.9e-05,
+      "22:41:47.962 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.s"
+    ],
+    [
+      1.6e-05,
+      "pringframework.test.annotation.SystemProfileValueSource] for class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.000365,
+      "22:41:47.962 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      7.7e-05,
+      "22:41:47.962 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.s"
+    ],
+    [
+      1e-05,
+      "pringframework.test.annotation.SystemProfileValueSource] for class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.002663,
+      "22:41:47.965 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3b2cf7ab testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testExcep"
+    ],
+    [
+      1.5e-05,
+      "tion = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2aa5fe93 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.example.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySource"
+    ],
+    [
+      1.1e-05,
+      "Locations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', c"
+    ],
+    [
+      1.1e-05,
+      "ontextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@71318ec4, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3327bd23, org.springframework.boot.test.mock.mockito.MockitoContextCustomize"
+    ],
+    [
+      2.4e-05,
+      "r@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.au"
+    ],
+    [
+      1.6e-05,
+      "toconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6325a3ee], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext ["
+    ],
+    [
+      1.2e-05,
+      "false] with mode [null].\r\n"
+    ],
+    [
+      0.000157,
+      "22:41:47.965 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      6.2e-05,
+      "22:41:47.965 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.s"
+    ],
+    [
+      1.1e-05,
+      "pringframework.test.annotation.SystemProfileValueSource] for class [com.example.DemoApplicationTests]\r\n"
+    ],
+    [
+      0.136488,
+      "22:41:48.101 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence\r\n22:41:48.102 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence\r\n"
+    ],
+    [
+      0.000133,
+      "22:41:48.102 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]\r\n"
+    ],
+    [
+      0.00063,
+      "22:41:48.102 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}\r\n"
+    ],
+    [
+      0.000233,
+      "22:41:48.103 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence\r\n"
+    ],
+    [
+      0.518261,
+      "\r\n  .   ____          _            __ _ _\r\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\r\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\r\n"
+    ],
+    [
+      2.1e-05,
+      " \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\r\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\r\n =========|_|==============|___/=/_/_/_/\r\n"
+    ],
+    [
+      0.000914,
+      " :: Spring Boot ::        (v1.4.1.RELEASE)\r\n\r\n"
+    ],
+    [
+      0.046414,
+      "2016-10-18 22:41:48.667  INFO 26927 --- [           main] com.example.DemoApplicationTests         : Starting DemoApplicationTests on istation with PID 26927 (started by iocanel in /home/iocanel/voxxed/voxxed-thess)\r\n"
+    ],
+    [
+      0.000154,
+      "2016-10-18 22:41:48.668  INFO 26927 --- [           main] com.example.DemoApplicationTests         : No active profile set, falling back to default profiles: default\r\n"
+    ],
+    [
+      0.030764,
+      "2016-10-18 22:41:48.699  INFO 26927 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@571c5681: startup date [Tue Oct 18 22:41:48 EEST 2016]; root of context hierarchy\r\n"
+    ],
+    [
+      1.349776,
+      "2016-10-18 22:41:50.049  INFO 26927 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@571c5681: startup date [Tue Oct 18 22:41:48 EEST 2016]; root of context hierarchy\r\n"
+    ],
+    [
+      0.039222,
+      "2016-10-18 22:41:50.088  INFO 26927 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped \"{[/]}\" onto public "
+    ],
+    [
+      7.4e-05,
+      "java.lang.String com.example.HelloThess.hello()"
+    ],
+    [
+      2.6e-05,
+      "\r\n"
+    ],
+    [
+      0.001731,
+      "2016-10-18 22:41:50.090  INFO 26927 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped \"{[/error],produces="
+    ],
+    [
+      8.1e-05,
+      "[text/html]}\" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)\r\n"
+    ],
+    [
+      9.4e-05,
+      "2016-10-18 22:41:50.090  INFO 26927 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped \"{[/error]}\" onto pu"
+    ],
+    [
+      1.8e-05,
+      "blic org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)\r\n"
+    ],
+    [
+      0.018924,
+      "2016-10-18 22:41:50.109  INFO 26927 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]\r\n"
+    ],
+    [
+      6.4e-05,
+      "2016-10-18 22:41:50.109  INFO 26927 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto "
+    ],
+    [
+      2.1e-05,
+      "handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]\r\n"
+    ],
+    [
+      0.023721,
+      "2016-10-18 22:41:50.133  INFO 26927 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favico"
+    ],
+    [
+      8.8e-05,
+      "n.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]\r\n"
+    ],
+    [
+      0.213233,
+      "2016-10-18 22:41:50.346  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}\" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException\r\n"
+    ],
+    [
+      0.002872,
+      "2016-10-18 22:41:50.349  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.000874,
+      "2016-10-18 22:41:50.350  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/info || /info.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.000914,
+      "2016-10-18 22:41:50.351  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.000651,
+      "2016-10-18 22:41:50.351  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/health || /health.json],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)\r\n"
+    ],
+    [
+      0.001158,
+      "2016-10-18 22:41:50.352  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/trace || /trace.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.000957,
+      "2016-10-18 22:41:50.353  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/dump || /dump.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.001075,
+      "2016-10-18 22:41:50.354  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)\r\n"
+    ],
+    [
+      0.000242,
+      "2016-10-18 22:41:50.355  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.004603,
+      "2016-10-18 22:41:50.359  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/env/{name:.*}],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)\r\n"
+    ],
+    [
+      0.000272,
+      "2016-10-18 22:41:50.360  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/env || /env.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.001026,
+      "2016-10-18 22:41:50.361  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.000768,
+      "2016-10-18 22:41:50.361  INFO 26927 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped \"{[/beans || /beans.json],methods=[GET],produces=[application/json]}\" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()\r\n"
+    ],
+    [
+      0.149937,
+      "2016-10-18 22:41:50.511  INFO 26927 --- [           main] com.example.DemoApplicationTests         : Started DemoApplicationTests in 2.403 seconds (JVM running for 2.958)\r\n"
+    ],
+    [
+      0.025915,
+      "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.584 sec - in com.example.DemoApplicationTests\r\n"
+    ],
+    [
+      0.000528,
+      "2016-10-18 22:41:50.532  INFO 26927 --- [       Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@571c5681: startup date [Tue Oct 18 22:41:48 EEST 2016]; root of context hierarchy\r\n"
+    ],
+    [
+      0.044091,
+      "\r\nResults :\r\n\r\n"
+    ],
+    [
+      2.7e-05,
+      "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0\r\n\r\n"
+    ],
+    [
+      0.002595,
+      "[INFO] \r\n[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.129042,
+      "[INFO] Building jar: /home/iocanel/voxxed/voxxed-thess/target/voxxed-thess-2016.jar\r\n"
+    ],
+    [
+      0.026235,
+      "[INFO] \r\n[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.255786,
+      "[INFO] \r\n[INFO] >>> fabric8-maven-plugin:3.1.74:build (default-cli) > initialize @ voxxed-thess >>>\r\n"
+    ],
+    [
+      0.000789,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.00073,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addTestSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000509,
+      "[INFO] \r\n[INFO] <<< fabric8-maven-plugin:3.1.74:build (default-cli) < initialize @ voxxed-thess <<<\r\n"
+    ],
+    [
+      2.2e-05,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:build (default-cli) @ voxxed-thess ---"
+    ],
+    [
+      1.5e-05,
+      "\r\n"
+    ],
+    [
+      0.019424,
+      "[INFO] \u001b[32mF8: Building Docker image in \u001b[34mKubernetes\u001b[32m mode\u001b[m\r\n"
+    ],
+    [
+      0.003827,
+      "[INFO] \u001b[32mF8: spring-boot: Using fat jar packaging as the spring boot plugin is using `repackage` goal execution\u001b[m\r\n"
+    ],
+    [
+      3e-05,
+      "[INFO] \u001b[32mF8: Running generator spring-boot\u001b[m\r\n"
+    ],
+    [
+      1.507571,
+      "[INFO] Copying files to /home/iocanel/voxxed/voxxed-thess/target/docker/iocanel/voxxed-thess/2016/build/maven\r\n"
+    ],
+    [
+      0.024456,
+      "[INFO] Building tar: /home/iocanel/voxxed/voxxed-thess/target/docker/iocanel/voxxed-thess/2016/tmp/docker-build.tar\r\n"
+    ],
+    [
+      0.026365,
+      "[INFO] \u001b[32mF8: docker-build.tar: Created [iocanel/voxxed-thess:2016] \"spring-boot\" in 871 milliseconds\u001b[m\r\n"
+    ],
+    [
+      0.979707,
+      "[INFO] \u001b[32mF8: [iocanel/voxxed-thess:2016] \"spring-boot\": Built image sha256:36340\u001b[m\r\n"
+    ],
+    [
+      0.025631,
+      "[INFO] \u001b[32mF8: [iocanel/voxxed-thess:2016] \"spring-boot\": Removed image \u001b[m\r\n"
+    ],
+    [
+      0.001007,
+      "[INFO] \r\n[INFO] >>> fabric8-maven-plugin:3.1.74:deploy (default-cli) > install @ voxxed-thess >>>"
+    ],
+    [
+      1.7e-05,
+      "\r\n"
+    ],
+    [
+      0.006899,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000759,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addTestSources (default) @ voxxed-thess ---"
+    ],
+    [
+      2e-05,
+      "\r\n"
+    ],
+    [
+      0.000278,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:generateStubs (default) @ voxxed-thess ---"
+    ],
+    [
+      1.9e-05,
+      "\r\n"
+    ],
+    [
+      0.093511,
+      "[INFO] Using Groovy 2.4.7 to perform generateStubs.\r\n"
+    ],
+    [
+      0.114614,
+      "[INFO] Generated 2 stubs.\r\n"
+    ],
+    [
+      0.000254,
+      "[INFO] \r\n[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ voxxed-thess ---"
+    ],
+    [
+      4.7e-05,
+      "\r\n"
+    ],
+    [
+      0.001029,
+      "[INFO] Using 'UTF-8' encoding to copy filtered resources.\r\n"
+    ],
+    [
+      0.000233,
+      "[INFO] Copying 1 resource\r\n"
+    ],
+    [
+      0.000412,
+      "[INFO] Copying 0 resource\r\n"
+    ],
+    [
+      6.8e-05,
+      "[INFO] \r\n"
+    ],
+    [
+      4.1e-05,
+      "[INFO] --- fabric8-maven-plugin:3.1.74:resource (fmp) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.012141,
+      "[INFO] \u001b[32mF8: Running in \u001b[34mKubernetes\u001b[32m mode\u001b[m\r\n"
+    ],
+    [
+      0.002233,
+      "[INFO] \u001b[32mF8: spring-boot: Using fat jar packaging as the spring boot plugin is using `repackage` goal execution\u001b[m\r\n"
+    ],
+    [
+      2.7e-05,
+      "[INFO] \u001b[32mF8: Running generator spring-boot\u001b[m\r\n"
+    ],
+    [
+      0.123677,
+      "[INFO] \u001b[32mF8: fmp-controller: Adding a default Deployment\u001b[m\r\n"
+    ],
+    [
+      0.034081,
+      "[INFO] \u001b[32mF8: fmp-service: Adding a default Service with ports [8080]\u001b[m\r\n"
+    ],
+    [
+      0.028347,
+      "[INFO] \u001b[32mF8: fabric8-expose: Adding Service label `expose:true` on service voxxed-thess so that it is exposed by the exposecontroller microservice. To disable use the maven argument: `-Dfabric8.profile=internal-microservice`\u001b[m\r\n"
+    ],
+    [
+      0.001256,
+      "[WARNING] \u001b[33mF8: No .git/config file could be found so cannot annotate kubernetes resources with git commit SHA and branch\u001b[m\r\n"
+    ],
+    [
+      0.006391,
+      "[WARNING] \u001b[33mF8: No .git/config file could be found so cannot annotate kubernetes resources with git commit SHA and branch\u001b[m\r\n"
+    ],
+    [
+      0.386919,
+      "[INFO] \r\n[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.002353,
+      "[INFO] Nothing to compile - all classes are up to date\r\n"
+    ],
+    [
+      7.2e-05,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:compile (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.091741,
+      "[INFO] Using Groovy 2.4.7 to perform compile.\r\n"
+    ],
+    [
+      0.15567,
+      "[INFO] Compiled 2 files.\r\n"
+    ],
+    [
+      6.3e-05,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:removeStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000525,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:testGenerateStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.090007,
+      "[INFO] Using Groovy 2.4.7 to perform testGenerateStubs.\r\n"
+    ],
+    [
+      0.101985,
+      "[INFO] Generated 2 stubs.\r\n"
+    ],
+    [
+      0.000195,
+      "[INFO] \r\n[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000994,
+      "[INFO] Using 'UTF-8' encoding to copy filtered resources.\r\n[INFO] skip non existing resourceDirectory /home/iocanel/voxxed/voxxed-thess/src/test/resources"
+    ],
+    [
+      2.1e-05,
+      "\r\n"
+    ],
+    [
+      5.8e-05,
+      "[INFO] \r\n[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.001728,
+      "[INFO] Nothing to compile - all classes are up to date\r\n"
+    ],
+    [
+      4.2e-05,
+      "[INFO] \r\n"
+    ],
+    [
+      1.6e-05,
+      "[INFO] --- gmavenplus-plugin:1.5:testCompile (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.093681,
+      "[INFO] Using Groovy 2.4.7 to perform testCompile.\r\n"
+    ],
+    [
+      0.142918,
+      "[INFO] Compiled 1 file.\r\n"
+    ],
+    [
+      6.2e-05,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:removeTestStubs (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000647,
+      "[INFO] \r\n[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.00228,
+      "[INFO] Skipping execution of surefire because it has already been run for this configuration\r\n"
+    ],
+    [
+      5.4e-05,
+      "[INFO] \r\n[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.00494,
+      "[INFO] Building jar: /home/iocanel/voxxed/voxxed-thess/target/voxxed-thess-2016.jar\r\n"
+    ],
+    [
+      0.007385,
+      "[INFO] \r\n[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.04229,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:helm (fmp) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.001417,
+      "[INFO] \u001b[32mF8: Creating Helm Chart \"voxxed-thess\" for Kubernetes\u001b[m\r\n"
+    ],
+    [
+      0.026766,
+      "[INFO] Building tar: /home/iocanel/voxxed/voxxed-thess/target/voxxed-thess-2016-helm.tar.gz\r\n"
+    ],
+    [
+      0.001009,
+      "[INFO] \r\n[INFO] >>> fabric8-maven-plugin:3.1.74:build (fmp) > initialize @ voxxed-thess >>>\r\n"
+    ],
+    [
+      0.000534,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000391,
+      "[INFO] \r\n[INFO] --- gmavenplus-plugin:1.5:addTestSources (default) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.000222,
+      "[INFO] \r\n[INFO] <<< fabric8-maven-plugin:3.1.74:build (fmp) < initialize @ voxxed-thess <<<\r\n"
+    ],
+    [
+      1.2e-05,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:build (fmp) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.007223,
+      "[INFO] \u001b[32mF8: Building Docker image in \u001b[34mKubernetes\u001b[32m mode\u001b[m\r\n"
+    ],
+    [
+      0.002196,
+      "[INFO] \u001b[32mF8: spring-boot: Using fat jar packaging as the spring boot plugin is using `repackage` goal execution\u001b[m\r\n[INFO] \u001b[32mF8: Running generator spring-boot\u001b[m\r\n"
+    ],
+    [
+      0.23544,
+      "[INFO] Copying files to /home/iocanel/voxxed/voxxed-thess/target/docker/iocanel/voxxed-thess/2016/build/maven\r\n"
+    ],
+    [
+      0.017441,
+      "[INFO] Building tar: /home/iocanel/voxxed/voxxed-thess/target/docker/iocanel/voxxed-thess/2016/tmp/docker-build.tar\r\n"
+    ],
+    [
+      0.022201,
+      "[INFO] \u001b[32mF8: docker-build.tar: Created [iocanel/voxxed-thess:2016] \"spring-boot\" in 195 milliseconds\u001b[m\r\n"
+    ],
+    [
+      1.052748,
+      "[INFO] \u001b[32mF8: [iocanel/voxxed-thess:2016] \"spring-boot\": Built image sha256:82402\u001b[m\r\n"
+    ],
+    [
+      0.027162,
+      "[INFO] \u001b[32mF8: [iocanel/voxxed-thess:2016] \"spring-boot\": Removed image \u001b[m\r\n"
+    ],
+    [
+      0.000685,
+      "[INFO] \r\n[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.024598,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/voxxed-thess-2016.jar to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016.jar\r\n"
+    ],
+    [
+      0.01713,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/pom.xml to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016.pom\r\n"
+    ],
+    [
+      0.005824,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/openshift.yml to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-openshift.yml\r\n"
+    ],
+    [
+      0.017362,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/openshift.json to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-openshift.json\r\n"
+    ],
+    [
+      0.001032,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/kubernetes.yml to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-kubernetes.yml\r\n"
+    ],
+    [
+      0.002028,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/kubernetes.json to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-kubernetes.json\r\n"
+    ],
+    [
+      0.001648,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/openshift.yml to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-openshift.yml\r\n"
+    ],
+    [
+      0.001265,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/openshift.json to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-openshift.json\r\n"
+    ],
+    [
+      0.000773,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/kubernetes.yml to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-kubernetes.yml\r\n"
+    ],
+    [
+      0.000708,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/kubernetes.json to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-kubernetes.json\r\n"
+    ],
+    [
+      0.000684,
+      "[INFO] Installing /home/iocanel/voxxed/voxxed-thess/target/voxxed-thess-2016-helm.tar.gz to /home/iocanel/.m2/repository/iocanel/voxxed-thess/2016/voxxed-thess-2016-helm.tar.gz\r\n"
+    ],
+    [
+      0.000699,
+      "[INFO] \r\n[INFO] <<< fabric8-maven-plugin:3.1.74:deploy (default-cli) < install @ voxxed-thess <<<\r\n"
+    ],
+    [
+      2e-05,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:deploy (default-cli) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.006846,
+      "[INFO] \u001b[32mF8: Using Kubernetes at https://istation.f8/ in namespace default with manifest /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/kubernetes.yml \u001b[m\r\n"
+    ],
+    [
+      0.058944,
+      "[INFO] Using namespace: default\r\n"
+    ],
+    [
+      0.032108,
+      "[INFO] Creating a Service from kubernetes.yml namespace default name voxxed-thess\r\n"
+    ],
+    [
+      0.018355,
+      "[INFO] Created Service: target/fabric8/applyJson/default/service-voxxed-thess.json\r\n"
+    ],
+    [
+      0.005235,
+      "[INFO] Creating a Deployment from kubernetes.yml namespace default name voxxed-thess\r\n"
+    ],
+    [
+      0.042949,
+      "[INFO] Created Deployment: target/fabric8/applyJson/default/deployment-voxxed-thess.json\r\n"
+    ],
+    [
+      0.000368,
+      "[WARNING] \u001b[33mF8: Could not find command kubectl. Please try running `mvn fabric8:install` to install the necessary binaries and ensure they get added to your $PATH\u001b[m\r\n"
+    ],
+    [
+      4.089348,
+      "[INFO] \r\n[INFO] --- fabric8-maven-plugin:3.1.74:start (default-cli) @ voxxed-thess ---\r\n"
+    ],
+    [
+      0.009996,
+      "[INFO] \u001b[32mF8: Using Kubernetes at https://istation.f8/ in namespace default with manifest /home/iocanel/voxxed/voxxed-thess/target/classes/META-INF/fabric8/kubernetes.yml \u001b[m\r\n"
+    ],
+    [
+      0.007648,
+      "[INFO] Using namespace: default\r\n"
+    ],
+    [
+      0.075708,
+      "[INFO] \u001b[32mF8: Scaling Deployment default/voxxed-thess to replicas: 1\u001b[m\r\n"
+    ],
+    [
+      0.314997,
+      "[INFO] ------------------------------------------------------------------------\r\n[INFO] BUILD SUCCESS\r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      0.000116,
+      "[INFO] Total time: 18.572 s\r\n"
+    ],
+    [
+      0.000191,
+      "[INFO] Finished at: 2016-10-18T22:42:01+03:00\r\n"
+    ],
+    [
+      0.24696,
+      "[INFO] Final Memory: 80M/1981M\r\n[INFO] ------------------------------------------------------------------------\r\n"
+    ],
+    [
+      0.065995,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001142,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      8.2e-05,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.040112,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      1.9e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.736398,
+      "k\u001b[90mubectl get pods --watch\u001b[39m\u001b[23D"
+    ],
+    [
+      0.231507,
+      "\bk\u001b[39mu"
+    ],
+    [
+      0.360335,
+      "\u001b[39mb"
+    ],
+    [
+      0.192071,
+      "\u001b[39me"
+    ],
+    [
+      0.255922,
+      "\u001b[39mc"
+    ],
+    [
+      0.22401,
+      "\u001b[39mt"
+    ],
+    [
+      0.587992,
+      "\u001b[39ml\u001b[39m \u001b[39mg\u001b[39me\u001b[39mt\u001b[39m \u001b[39mp\u001b[39mo\u001b[39md\u001b[39ms\u001b[39m \u001b[39m-\u001b[39m-\u001b[39mw\u001b[39ma\u001b[39mt\u001b[39mc\u001b[39mh"
+    ],
+    [
+      0.375756,
+      "\u001b[?1l\u001b>\u001b[?2004l"
+    ],
+    [
+      2.1e-05,
+      "\r\r\n"
+    ],
+    [
+      0.000618,
+      "\u001b]2;kubectl get pods --watch\u0007\u001b]1;kubectl\u0007"
+    ],
+    [
+      0.072723,
+      "NAME                            READY     STATUS    RESTARTS   AGE\r\nfabric8-p83z1                   2/2       Running   0          3h\r\nvoxxed-thess-2535862765-pw5yb   0/1       Running   0          9s\r\n"
+    ],
+    [
+      11.479277,
+      "NAME                            READY     STATUS    RESTARTS   AGE\r\nvoxxed-thess-2535862765-pw5yb   1/1       Running   0          21s\r\n"
+    ],
+    [
+      1.902771,
+      "^C"
+    ],
+    [
+      0.002631,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001309,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      0.000135,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.047591,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      2.6e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      4.4e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      2.032671,
+      "k\u001b[90mubectl get pods --watch\u001b[39m\u001b[23D"
+    ],
+    [
+      0.25659,
+      "\bk\u001b[39mu"
+    ],
+    [
+      0.167867,
+      "\u001b[39mb"
+    ],
+    [
+      0.207726,
+      "\u001b[39me"
+    ],
+    [
+      0.239813,
+      "\u001b[39mc"
+    ],
+    [
+      0.24036,
+      "\u001b[39mt"
+    ],
+    [
+      0.071688,
+      "\u001b[39ml"
+    ],
+    [
+      0.160548,
+      "\u001b[39m "
+    ],
+    [
+      0.207452,
+      "\u001b[39mp\u001b[90mo\u001b[90mr\u001b[90mt\u001b[90m-\u001b[90mf\u001b[90mo\u001b[90mr\u001b[90mw\u001b[90ma\u001b[90mr\u001b[90md\u001b[90m \u001b[90mv\u001b[90mo\u001b[90mx\u001b[90mxed-thess-2535862765-806gr  8080 &\u001b[39m\u001b[49D"
+    ],
+    [
+      0.240352,
+      "\u001b[39mo"
+    ],
+    [
+      0.095615,
+      "\u001b[39mr"
+    ],
+    [
+      0.160742,
+      "\u001b[39mt"
+    ],
+    [
+      0.479699,
+      "\u001b[39m-"
+    ],
+    [
+      0.495726,
+      "\u001b[39mf"
+    ],
+    [
+      0.192125,
+      "\u001b[39mo"
+    ],
+    [
+      0.111548,
+      "\u001b[39mr"
+    ],
+    [
+      0.272335,
+      "\u001b[39mw"
+    ],
+    [
+      0.199922,
+      "\u001b[39ma"
+    ],
+    [
+      0.111982,
+      "\u001b[39mr"
+    ],
+    [
+      0.239832,
+      "\u001b[39md"
+    ],
+    [
+      0.216339,
+      "\u001b[39m "
+    ],
+    [
+      3.807834,
+      "\u001b[39m\u001b[7mv\u001b[39m\u001b[7mo\u001b[39m\u001b[7mx\u001b[39m\u001b[7mx\u001b[39m\u001b[7me\u001b[39m\u001b[7md\u001b[39m\u001b[7m-\u001b[39m\u001b[7mt\u001b[39m\u001b[7mh\u001b[39m\u001b[7me\u001b[39m\u001b[7ms\u001b[39m\u001b[7ms\u001b[39m\u001b[7m-\u001b[39m\u001b[7m2\u001b[39m\u001b[7m5\u001b[39m\u001b[7m3\u001b[39m\u001b[7m5\u001b[39m\u001b[7m8\u001b[39m\u001b[7m6\u001b[39m\u001b[7m2\u001b[39m\u001b[7m7\u001b[39m\u001b[7m6\u001b[39m\u001b[7m5\u001b[39m\u001b[7m-\u001b[39m\u001b[7mp\u001b[39m\u001b[7mw\u001b[39m\u001b[7m5\u001b[39m\u001b[7my\u001b[39m\u001b[7mb\u001b[27m\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[8D"
+    ],
+    [
+      0.996479,
+      "\u001b[29D\u001b[27mv\u001b[27mo\u001b[27mx\u001b[27mx\u001b[27me\u001b[27md\u001b[27m-\u001b[27mt\u001b[27mh\u001b[27me\u001b[27ms\u001b[27ms\u001b[27m-\u001b[27m2\u001b[27m5\u001b[27m3\u001b[27m5\u001b[27m8\u001b[27m6\u001b[27m2\u001b[27m7\u001b[27m6\u001b[27m5\u001b[27m-\u001b[27mp\u001b[27mw\u001b[27m5\u001b[27my\u001b[27mb "
+    ],
+    [
+      0.900646,
+      "8"
+    ],
+    [
+      0.11132,
+      "0"
+    ],
+    [
+      0.175874,
+      "8"
+    ],
+    [
+      0.10447,
+      "0"
+    ],
+    [
+      0.391529,
+      " "
+    ],
+    [
+      0.472781,
+      "&"
+    ],
+    [
+      0.674176,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      5.9e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000685,
+      "\u001b]2;kubectl port-forward voxxed-thess-2535862765-pw5yb 8080 &\u0007\u001b]1;kubectl\u0007"
+    ],
+    [
+      0.000366,
+      "[1] 27281\r\n"
+    ],
+    [
+      5.1e-05,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001333,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      0.000138,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.041591,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      2.7e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.2e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.094733,
+      "I1018 22:42:33.271718   27281 portforward.go:213] Forwarding from 127.0.0.1:8080 -> 8080\r\nI1018 22:42:33.271824   27281 portforward.go:213] Forwarding from [::1]:8080 -> 8080\r\n"
+    ],
+    [
+      1.612972,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000742,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                                                                                                                     \r \r"
+    ],
+    [
+      0.001224,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      0.00014,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.046869,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      3.1e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.3e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.795078,
+      "c\u001b[90md voxxed-thess\u001b[39m\u001b[14D"
+    ],
+    [
+      0.112686,
+      "\bc\u001b[39mu\u001b[90mr\u001b[90ml\u001b[90m \u001b[90mh\u001b[90mt\u001b[90mt\u001b[90mp\u001b[90m:\u001b[90m/\u001b[90m/\u001b[90ml\u001b[90mo\u001b[90mc\u001b[90malhost:8080\u001b[39m\u001b[24D"
+    ],
+    [
+      0.667301,
+      "\u001b[39mr\u001b[39ml\u001b[39m \u001b[39mh\u001b[39mt\u001b[39mt\u001b[39mp\u001b[39m:\u001b[39m/\u001b[39m/\u001b[39ml\u001b[39mo\u001b[39mc\u001b[39ma\u001b[39ml\u001b[39mh\u001b[39mo\u001b[39ms\u001b[39mt\u001b[39m:\u001b[39m8\u001b[39m0\u001b[39m8\u001b[39m0"
+    ],
+    [
+      0.815814,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      9e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000623,
+      "\u001b]2;curl http://localhost:8080\u0007\u001b]1;curl\u0007"
+    ],
+    [
+      0.008334,
+      "I1018 22:42:37.333792   27281 portforward.go:247] Handling connection for 8080\r\r\n"
+    ],
+    [
+      0.029171,
+      "Hello Thessaloniki using Spring!\r\n"
+    ],
+    [
+      0.001372,
+      "\u001b]7;file://istation/home/iocanel/voxxed/voxxed%2Dthess\u0007"
+    ],
+    [
+      7.6e-05,
+      "\u001b]2;iocanel@istation: ~/voxxed/voxxed-thess\u0007"
+    ],
+    [
+      1.9e-05,
+      "\u001b]1;../voxxed-thess\u0007"
+    ],
+    [
+      0.046395,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\u001b[42m\u001b[30m @istation \u001b[49m\u001b[39m\u001b[32m\u001b[44m\u001b[49m\u001b[39m\u001b[37m\u001b[44m ~/voxxed/voxxed-thess\u001b[34m \u001b[34m\u001b[47m\u001b[37m\u001b[30m\u001b[47m\u001b[37m \u001b[49m\u001b[39m \u001b[K\u001b[155C\u001b[37m\u001b[49m\u001b[30m\u001b[47m  \u001b[39m\u001b[49m\u001b[158D"
+    ],
+    [
+      3.9e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      2.424685,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "duration": 118.511927,
+  "width": 198
+}
