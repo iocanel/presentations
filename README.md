@@ -1,5 +1,5 @@
 # My presentations
-A repository for my presnetation
+A repository for my presnetations
 
 ## Conferences
 
