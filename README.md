@@ -10,4 +10,5 @@ A repository for my presnetation
 - [Voxxed Thessaloniki 2016: Getting started with microservices on Kubernetes](https://github.com/iocanel/presentations/tree/2016-voxxed@thessaloniki-getting-started-with-microservices-on-kubernetes)
 
 ## Other
-[Fuse Face2Face 2013: What's new in Fuse Fabric 7.3](https://github.com/iocanel/presentations/tree/2013-fusef2f-whats-new-in-fuse-fabric-7-3)
+- [Fuse Face2Face 2013: What's new in Fuse Fabric 7.3](https://github.com/iocanel/presentations/tree/2013-fusef2f-whats-new-in-fuse-fabric-7-3)
+- [Fuse Engineering Meeting May 2017: Syndesis CI/CD](https://github.com/iocanel/presentations/tree/2017-fuseeng-syndesis-ci-cd)
