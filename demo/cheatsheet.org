@@ -1,0 +1,62 @@
+* create a hello world application using spring cli
+** shell
+*** spring init --dependencies=web calculator
+** create a new @Service    
+** create a new @RestController
+** pom.xml
+*** add fabric8-maven-plugin configuratior
+* demonstrate discovery client in action
+** DemoService.java
+*** refactor distance to use the RestTemplate   
+** DemoApplication.java    
+*** add RestTemplate method
+** pom.xml
+*** add spring cloud netflix in dependency management
+*** add spring-cloud-starter-ribbon
+** application.properties
+*** add configuration value func=sum
+** create additional services
+*** create sum
+*** create sub
+*** create sqrt
+*** create pow
+* demonstrate hystrix
+** pom.xml
+*** add hystrix dependency
+*** add hystrix label to f-m-p (for discovery)
+** modify DemoApplication.java
+*** add @EnableCircuitBreaker   
+** modify DemoController.java
+*** add @HystrixCommand annotation
+* demonstrate zipkin
+** pom.xml
+*** add spring-cloud-starter-kubernetes-zipkin dependency   
+** application.properties
+*** spring.sleuth.sampler.percentage=1.0 
+** CaluclatorService.java    
+*** Add the following constants:
+    static final String POW_FORMAT = "pow/eval/diff(%s,%s)/2";
+    static final String SQRT_FORMAT = "sqrt/eval/sum(%s,%s)/";
+*** Create a method that calls the two
+** If you can't find a trace ...
+traces/1faf29eabe68c476
+* demonstrate configmap support...
+** pom.xml  
+*** add spring-cloud-starter-kubernetes-config
+*** add spring-boot-starter-actuator (for reload)    
+** application.properties
+*** add spring.application.name=calculator 
+*** add spring.cloud.kubernetes.reload.enabled=true
+** DemonConfig.java    
+*** add @Configuration and ConfigurationProperties annotation
+** redeploy
+** create ConfigMap:
+cat <<EOF | kubectl create -f -
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: calculator
+data:
+  application.properties: |-
+   message=The distance is: 
+EOF

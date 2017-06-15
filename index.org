@@ -1,0 +1,109 @@
+#+OPTIONS: toc:nil num:nil
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t reveal_compass:nil
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+
+#+REVEAL_TRANS: slide
+#+REVEAL_THEME: blood
+
+#+Title: Spring Cloud Kubernetes
+#+Author: Ioannis Canellos
+#+Email: iocanel@gmail.com
+
+* about me
+  + principal software engineer @red hat
+  + member @apache software foundation
+* agenda
+  + history
+  + brief intro to spring cloud
+  + spring cloud kubernetes
+  + questions
+* history
+  + fabric8
+  + kubernetes & cdi
+  + first attempt to spring / kubernetes
+  + kubeflix
+* what's spring cloud
+  a set of tools on top of spring
+  + service registry
+  + load balancer
+  + circuit breaker
+  + configuration management
+* what's spring cloud kubernetes
+  + implementations
+  + starters
+  + examples
+  of spring-cloud on kubernetes
+* deep dive  
+  from a zero
+  to building a distributed match calculator
+  + loadbalancers
+  + circuit breakers
+  + tracing
+  powered by spring cloud kubernetes
+* kubernetes client
+  + awesome dsl
+  + minimal configuration
+    + supports service accounts
+    + supports .kube/config
+    + customizable via application.yml
+  + transparent
+* discovery client
+  + endpoint lookups by id
+  + no namespace support
+  + no multiport service support
+  + is reused by by
+    + netflix components
+    + sleuth
+    + more
+* ribbon integration
+  client side loadbalancer
+  + why?
+    + more control
+    + weights
+    + decouples from infra
+  + how does it use discovery client?
+* hystrix   
+  the circuit breaker pattern
+  + stop cascading failures
+  + become more responsive
+  + gracefully handle errors   
+* zipkin    
+  distributed system tracing
+  + collects timing data
+  + microservice troubleshooting
+
+* zipkin and spring cloud kubernetes
+  + spring cloud sleuth
+    + intercepts calls to collect data  
+    + sends data to server  
+      
+  spring cloud kubernetes tells sleuth how to find zipkin
+* if time permits...    
+* externalizing configuration
+  why?
+  + separation of config data
+  how?
+  + Property Source
+  + ConfigMap and Secret
+* ConfigMap PropertySource
+  how does it work?
+  + map per application
+  + overrides applcation.yml
+  why not just mount the ConfigMap?
+  + transparency
+  + reload support
+* Secret PropertySource
+   a ConfigMap for sensitive information
+* archaius bridge
+  + archais configmap integration
+  + supports watches
+  + makes sense if archaius is already used
+* profile auto configuration    
+  + detects kubernetes
+  + adds the kubernetes profile
+* pod health indicator
+  + usable as readiness probe
+  + reports health info
+  + diagnostic information
+* question?

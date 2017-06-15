@@ -1,0 +1,3 @@
+#!/bin/bash
+kubectl delete -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.5/zipkin-starter-minimal-0.1.5-kubernetes.yml
+kubectl delete pv default-mysql-data

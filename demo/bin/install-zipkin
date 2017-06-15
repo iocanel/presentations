@@ -1,0 +1,3 @@
+#!/bin/bash
+kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.9/zipkin-starter-minimal-0.1.9-kubernetes.yml
+gofabric8 volumes

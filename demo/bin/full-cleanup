@@ -1,0 +1,4 @@
+#!/bin/bash
+
+for d in `kubectl get deployments | grep -v NAME | cut -f1 -d " "`;do kubectl delete deployment $d; done
+for s in `kubectl get services | grep -v kubernetes | grep -v NAME | cut -f1 -d " "`;do kubectl delete service $s; done
