@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Making the best out of Jenkins on Kubernetes and Openshift</title>
+<meta name="author" content="(Ioannis Canellos)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/iocanel/workspace/src/github.com/iocanel/presentations/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/iocanel/workspace/src/github.com/iocanel/presentations/css/theme/jenkinsworld.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home/iocanel/workspace/src/github.com/iocanel/presentations/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h3>Making the best out of Jenkins on Kubernetes and Openshift</h3><h4>Ioannis Canellos</h4><h5></h5>
+</section>
+<section>
+<section id="slide-org1c0a14c">
+<div class="slide-header"></div>
+<h2 id="org1c0a14c"></h2>
+
+<div class="figure">
+<p><img src="./images/title-all-logos.png" alt="title-all-logos.png" />
+</p>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orge1bd960">
+<div class="slide-header"></div>
+<h2 id="orge1bd960">about me</h2>
+
+<div class="figure">
+<p><img src="./images/aboutme.png" alt="aboutme.png" />
+</p>
+</div>
+<ul>
+<li>principal software engineer @red hat</li>
+<li>member @apache software foundation</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgbb1cf86">
+<div class="slide-header"></div>
+<h2 id="orgbb1cf86">agenda</h2>
+<ul>
+<li>getting started</li>
+<li>plugin overview</li>
+<li>advanced topics</li>
+<li>tips</li>
+<li>q &amp; a</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orge7772ab">
+<div class="slide-header"></div>
+<h2 id="orge7772ab">getting started</h2>
+<ul>
+<li>docker images
+<ul>
+<li>jenkins
+<ul>
+<li>community</li>
+<li>openshift</li>
+
+</ul></li>
+<li>agents</li>
+
+</ul></li>
+<li>kubernetes manifests</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org0b7ab90">
+<div class="slide-header"></div>
+<h2 id="org0b7ab90">scaling jenkins</h2>
+<p>
+jenkins scales using agents
+</p>
+<ul>
+<li>on demand</li>
+<li>adhoc</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orge22ee43">
+<div class="slide-header"></div>
+<h2 id="orge22ee43">build platform</h2>
+<p>
+each build requires a set of tools, but who configures?
+</p>
+<ul>
+<li>different tools?</li>
+<li>different tool versions?</li>
+
+</ul>
+<p>
+duplicating configuration
+</p>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgb621611">
+<div class="slide-header"></div>
+<h2 id="orgb621611">docker pipeline</h2>
+<p>
+package tools into containers, reference containers via pipelines
+</p>
+
+<ul>
+<li>pros:
+<ul>
+<li>easy to use</li>
+<li>reproducible</li>
+
+</ul></li>
+<li>cons:
+<ul>
+<li>requires docker binaries (cli)</li>
+<li>requires docker access (socket)</li>
+<li>no support for kubernetes specific resources (e.g. secrets)</li>
+
+</ul></li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgce43e87">
+<div class="slide-header"></div>
+<h3 id="orgce43e87">using docker pipeline</h3>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">node <span style="color: #4f97d7;">{</span>
+  docker.image<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'golang'</span><span style="color: #bc6ec5;">)</span>.inside <span style="color: #bc6ec5;">{</span>
+    git <span style="color: #2d9574;">'https://github.com/iocanel/hello-go.git'</span>
+    sh <span style="color: #2d9574;">'go build -o bin/helloworld helloworld.go'</span>
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org5293349">
+<div class="slide-header"></div>
+<h3 id="org5293349">adding docker build</h3>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">node <span style="color: #4f97d7;">{</span>
+  docker.image<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'golang'</span><span style="color: #bc6ec5;">)</span>.inside <span style="color: #bc6ec5;">{</span>
+    git <span style="color: #2d9574;">'https://github.com/iocanel/hello-go.git'</span>
+    sh <span style="color: #2d9574;">'go build -o bin/helloworld helloworld.go'</span>
+    docker.build<span style="color: #2d9574;">(</span><span style="color: #2d9574;">'iocanel/hello-go'</span><span style="color: #2d9574;">)</span>
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org039723b">
+<div class="slide-header"></div>
+<h2 id="org039723b">kubernetes pipeline pt. 1</h2>
+<p>
+1st attempt: port docker pipeline to kubernetes
+</p>
+<ul>
+<li>pros:
+<ul>
+<li>support for kubernetes resources</li>
+
+</ul></li>
+<li>cons:
+<ul>
+<li>requires shared file system</li>
+
+</ul></li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orge835abc">
+<div class="slide-header"></div>
+<h2 id="orge835abc">kubernetes plugin</h2>
+<p>
+co-locate/sidecar agent with build tools to lift sharing limitations
+</p>
+<ul>
+<li>pros:
+<ul>
+<li>runs everywhere</li>
+
+</ul></li>
+<li>cons:
+<ul>
+<li>verbose</li>
+<li>not as intuitive as the docker/kubernetes pipeline</li>
+
+</ul></li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgfc3c1c5">
+<div class="slide-header"></div>
+<h3 id="orgfc3c1c5">using kubernetes plugin</h3>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">podTemplate<span style="color: #4f97d7;">(</span>name:<span style="color: #2d9574;">'mypod'</span>, label: <span style="color: #2d9574;">'provides-go'</span>, containers: <span style="color: #bc6ec5;">[</span>
+ containerTemplate<span style="color: #2d9574;">(</span>name: <span style="color: #2d9574;">'golang'</span>, image: <span style="color: #2d9574;">'golang:1.8.0'</span>, ttyEnabled: <span style="color: #a45bad;">true</span>, command: <span style="color: #2d9574;">'cat'</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    node<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'provides-go'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+       container<span style="color: #2d9574;">(</span><span style="color: #2d9574;">'golang'</span><span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+         git <span style="color: #2d9574;">'https://github.com/iocanel/hello-go.git'</span>
+         sh <span style="color: #2d9574;">'go build -o bin/helloworld helloworld.go'</span>
+       <span style="color: #2d9574;">}</span>
+    <span style="color: #bc6ec5;">}</span>
+ <span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org7b9c1b0">
+<div class="slide-header"></div>
+<h2 id="org7b9c1b0">kubernetes pipeline pt. 2</h2>
+<p>
+re-write on top of kubernetes plugin to have best of both worlds
+</p>
+<ul>
+<li>pros:
+<ul>
+<li>hides complexity</li>
+
+</ul></li>
+<li>cons:
+<ul>
+<li>its experimental</li>
+
+</ul></li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org14de38d">
+<div class="slide-header"></div>
+<h2 id="org14de38d">testing</h2>
+<p>
+Testing individual projects is not enough 
+</p>
+<ul>
+<li>integration testing</li>
+<li>system testing</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgd16b97f">
+<div class="slide-header"></div>
+<h2 id="orgd16b97f">arquillian cube</h2>
+
+<div class="figure">
+<p><img src="./images/cube-k8s-os3.png" alt="cube-k8s-os3.png" />
+</p>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org885f323">
+<div class="slide-header"></div>
+<h2 id="org885f323">arquillian cube pt.2</h2>
+<p>
+A tool to simplify integration/system testing on kubernetes 
+</p>
+<ul>
+<li>generate a test namespace / project</li>
+<li>deploy all required resources
+<ul>
+<li>supports f-m-p</li>
+<li>supports shell scripts</li>
+<li>supports dependencies</li>
+
+</ul></li>
+<li>wait until everything is ready</li>
+<li>run the test suite</li>
+<li>inject resources</li>
+<li>simplify service access</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org4b0515d">
+<div class="slide-header"></div>
+<h2 id="org4b0515d">arquillian cube limitations</h2>
+<p>
+Arquillian cube rocks, but has some limitations:
+</p>
+<ul>
+<li>it mostly aims java</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orga60ecde">
+<div class="slide-header"></div>
+<h2 id="orga60ecde">arquillian steps</h2>
+<p>
+An arquillian cube wrapper to use in your pipelines.
+</p>
+<ul>
+<li>manage test namespaces/projects</li>
+<li>setup test environments</li>
+<li>validate test environments</li>
+<li>clean things up</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgba94b06">
+<div class="slide-header"></div>
+<h3 id="orgba94b06">creating a test namespace</h3>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">inNamespace<span style="color: #4f97d7;">(</span>prefix: <span style="color: #2d9574;">'testns'</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #7590db;">namespace</span> = currentNamespace<span style="color: #bc6ec5;">()</span>
+  sh <span style="color: #2d9574;">"What happens in </span><span style="color: #7590db;">${namespace}</span><span style="color: #2d9574;"> stays in </span><span style="color: #7590db;">${namespace}</span><span style="color: #2d9574;">"</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org48ab4f6">
+<div class="slide-header"></div>
+<h3 id="org48ab4f6">setting up environment</h3>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">inNamespace<span style="color: #4f97d7;">(</span>prefix: <span style="color: #2d9574;">'testns'</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+     createEnvironment<span style="color: #bc6ec5;">(</span>environmentConfigUrl: <span style="color: #2d9574;">"file:</span><span style="color: #7590db;">${env.WORKSPACE}</span><span style="color: #2d9574;">/kubernetes.yml"</span><span style="color: #bc6ec5;">)</span>
+     stage<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'run system tests'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+     <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org05eb211">
+<div class="slide-header"></div>
+<h2 id="org05eb211">deployments</h2>
+<p>
+Multiple ways to deploy&#x2026;
+</p>
+<ul>
+<li>Arquillian steps:</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">createEnvironment<span style="color: #4f97d7;">(</span>environmentConfigUrl: <span style="color: #2d9574;">"file:</span><span style="color: #7590db;">${env.WORKSPACE}</span><span style="color: #2d9574;">/kubernetes.yml"</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+<ul>
+<li>Openshift jenkins plugin:</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">openshiftCreateResources<span style="color: #4f97d7;">(</span>yaml:  <span style="color: #2d9574;">"file:</span><span style="color: #7590db;">${env.WORKSPACE}</span><span style="color: #2d9574;">/kubernetes.yml"</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+<ul>
+<li>manual / cli</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgfb1b193">
+<div class="slide-header"></div>
+<h2 id="orgfb1b193">tips</h2>
+
+<div class="figure">
+<p><img src="./images/light-bulp.png" alt="light-bulp.png" />
+</p>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org8dccc95">
+<div class="slide-header"></div>
+<h2 id="org8dccc95">use secrets</h2>
+<div class="org-src-container">
+
+<pre  class="src src-groovy"><span style="color: #7590db;">domain</span> = <span style="color: #ce537a; font-weight: bold;">Domain</span>.global<span style="color: #4f97d7;">()</span>
+<span style="color: #7590db;">store</span> = <span style="color: #ce537a; font-weight: bold;">Jenkins</span>.instance
+               .getExtensionList<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">'com.cloudbees.plugins.credentials.SystemCredentialsProvider'</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>
+               .getStore<span style="color: #4f97d7;">()</span>
+
+<span style="color: #7590db;">githubAccount</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">UsernamePasswordCredentialsImpl</span><span style="color: #4f97d7;">(</span>
+        <span style="color: #ce537a; font-weight: bold;">CredentialsScope</span>.GLOBAL,
+        <span style="color: #2d9574;">"github"</span>, <span style="color: #2d9574;">"Github Account Credentials"</span>,
+        <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">File</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'/mnt/secrets/github/username'</span><span style="color: #bc6ec5;">)</span>.text
+        <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">File</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'/mnt/secrets/github/token'</span><span style="color: #bc6ec5;">)</span>.text
+<span style="color: #4f97d7;">)</span>
+
+<span style="color: #7590db;">githubAccessToken</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">StringCredentialsImpl</span><span style="color: #4f97d7;">(</span>
+        <span style="color: #ce537a; font-weight: bold;">CredentialsScope</span>.GLOBAL,
+        <span style="color: #2d9574;">"githubaccesstoken"</span>,
+        <span style="color: #2d9574;">"Github Access Token"</span>,
+        <span style="color: #ce537a; font-weight: bold;">Secret</span>.fromString<span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">File</span><span style="color: #2d9574;">(</span><span style="color: #2d9574;">'/mnt/secrets/github/token'</span><span style="color: #2d9574;">)</span>.text<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+store.addCredentials<span style="color: #4f97d7;">(</span>domain, githubAccount<span style="color: #4f97d7;">)</span>
+store.addCredentials<span style="color: #4f97d7;">(</span>domain, githubAccessToken<span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org18a5b72">
+<div class="slide-header"></div>
+<h2 id="org18a5b72">correlate jobs with pods</h2>
+<p>
+sometimes the console is not enough
+</p>
+<ul>
+<li>describe pods</li>
+<li>inspect pods</li>
+<li>exec into pods</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-groovy"><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #7590db;">mylabel</span> = <span style="color: #2d9574;">"</span><span style="color: #7590db;">${env.JOB_NAME}</span><span style="color: #2d9574;">"</span> +
+           <span style="color: #2d9574;">"_"</span> +
+           <span style="color: #2d9574;">"</span><span style="color: #7590db;">${env.BUILD_NUMBER}</span><span style="color: #2d9574;">"</span>
+           .replaceAll<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">'[^A-Za-z0-9]'</span>, <span style="color: #2d9574;">'_'</span><span style="color: #4f97d7;">)</span>
+
+podTemplate<span style="color: #4f97d7;">(</span>label: <span style="color: #2d9574;">"</span><span style="color: #7590db;">$mylabel</span><span style="color: #2d9574;">"</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span> ... <span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org8f731cd">
+<div class="slide-header"></div>
+<h2 id="org8f731cd">composition vs inheritance</h2>
+<p>
+no need to create new images just to add a single binary
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-groovy">podTemplate<span style="color: #4f97d7;">(</span>name:<span style="color: #2d9574;">'mypod'</span>, label: <span style="color: #2d9574;">'provides-maven-and-oc'</span>, containers: <span style="color: #bc6ec5;">[</span>
+ containerTemplate<span style="color: #2d9574;">(</span>name: <span style="color: #2d9574;">'maven'</span>, image: <span style="color: #2d9574;">'maven'</span>, ttyEnabled: <span style="color: #a45bad;">true</span>, command: <span style="color: #2d9574;">'cat'</span><span style="color: #2d9574;">)</span>,
+ containerTemplate<span style="color: #2d9574;">(</span>name: <span style="color: #2d9574;">'oc'</span>, image: <span style="color: #2d9574;">'openshift/origin:v1.5.0-rc.0'</span>, 
+                   ttyEnabled: <span style="color: #a45bad;">true</span>, command: <span style="color: #2d9574;">'cat'</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    node<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">'provider-maven-and-oc'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+       stage <span style="color: #2d9574;">'copy oc to workspace'</span>
+       container<span style="color: #2d9574;">(</span><span style="color: #2d9574;">'openshift'</span><span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+         sh <span style="color: #2d9574;">'mkdir ${HOME}/bin &amp;&amp; cp $(which oc} ${HOME}/bin'</span>
+       <span style="color: #2d9574;">}</span>
+       stage <span style="color: #2d9574;">'build and create environment'</span>
+       container<span style="color: #2d9574;">(</span><span style="color: #2d9574;">'maven'</span><span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+         sh <span style="color: #2d9574;">'mvn clean install &amp;&amp; ${HOME}/bin/oc create -f target/openshift.yml'</span>
+
+       <span style="color: #2d9574;">}</span>
+    <span style="color: #bc6ec5;">}</span>
+ <span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org2b4d3e1">
+<div class="slide-header"></div>
+<h2 id="org2b4d3e1">use pipeline libraries</h2>
+<p>
+not everyone is a pipeline guru&#x2026;
+</p>
+<ul>
+<li>promote readability</li>
+<li>promote reusability</li>
+<li>hide implementation details</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org1994196">
+<div class="slide-header"></div>
+<h2 id="org1994196">love thy CI/CD &#x2026;</h2>
+<ul>
+<li>use source control for everything</li>
+<li>collocate code and pipelines</li>
+<li>no snapshots no latest</li>
+
+</ul>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org55795c0">
+<div class="slide-header"></div>
+<h2 id="org55795c0">resources</h2>
+<p>
+This presentation:
+</p>
+<ul>
+<li><a href="https://github.com/iocanel/presentations">https://github.com/iocanel/presentations</a></li>
+
+</ul>
+
+<p>
+Plugins:
+</p>
+<ul>
+<li><a href="https://github.com/jenkinsci/kubernetes-plugin">https://github.com/jenkinsci/kubernetes-plugin</a></li>
+<li><a href="https://github.com/jenkinsci/kubernetes-pipeline-plugin">https://github.com/jenkinsci/kubernetes-pipeline-plugin</a></li>
+<li><a href="https://github.com/openshift/jenkins-plugin">https://github.com/openshift/jenkins-plugin</a></li>
+
+</ul>
+
+<p>
+Pipeline Libraries:
+</p>
+<ul>
+<li><a href="https://github.com/fabric8io/fabric8-pipeline-library">https://github.com/fabric8io/fabric8-pipeline-library</a></li>
+<li><a href="https://github.com/syndesisio/syndesis-pipeline-library">https://github.com/syndesisio/syndesis-pipeline-library</a></li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgf7ca819">
+<div class="slide-header"></div>
+<h2 id="orgf7ca819">people to follow</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><img src="./images/people/csanchez.png" alt="csanchez.png" /></td>
+<td class="org-left">Carlos Sanchez</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./images/people/jstrachan.png" alt="jstrachan.png" /></td>
+<td class="org-left">James Strachan</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./images/people/jrawlings.png" alt="jrawlings.png" /></td>
+<td class="org-left">James Rawlings</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org39f4efd">
+<div class="slide-header"></div>
+<h2 id="org39f4efd">questions?</h2>
+
+<div class="figure">
+<p><img src="./images/questionmark.png" alt="questionmark.png" />
+</p>
+</div>
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgeef4a5b">
+<div class="slide-header"></div>
+<h2 id="orgeef4a5b">the end</h2>
+<p>
+Thank you!
+</p>
+<div class="slide-footer"></div>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///home/iocanel/workspace/src/github.com/iocanel/presentations/lib/js/head.min.js"></script>
+<script src="file:///home/iocanel/workspace/src/github.com/iocanel/presentations/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: false,
+progress: true,
+history: true,
+center: false,
+slideNumber: false,
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1920,
+height: 1080,
+margin: 0.01,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///home/iocanel/workspace/src/github.com/iocanel/presentations/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///home/iocanel/workspace/src/github.com/iocanel/presentations/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/iocanel/workspace/src/github.com/iocanel/presentations/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/iocanel/workspace/src/github.com/iocanel/presentations/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/iocanel/workspace/src/github.com/iocanel/presentations/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

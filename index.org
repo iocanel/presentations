@@ -1,0 +1,257 @@
+#+OPTIONS: toc:nil 
+#+OPTIONS: num:nil
+#+OPTIONS: reveal_center:nil 
+#+OPTIONS: reveal_progress:t 
+#+OPTIONS: reveal_history:t 
+#+OPTIONS: reveal_control:nil
+#+OPTIONS: reveal_compass:t
+#+OPTIONS: reveal_mathjax:t 
+#+OPTIONS: reveal_rolling_links:t 
+#+OPTIONS: reveal_keyboard:t 
+#+OPTIONS: reveal_overview:t 
+#+OPTIONS: reveal_slide_number:nil
+
+#+OPTIONS: reveal_width:1920 reveal_height:1080
+#+OPTIONS: reveal_title_slide:"<h3>%t</h3><h4>%a</h4><h5></h5>"
+
+#+REVEAL_ROOT: file:///home/iocanel/workspace/src/github.com/iocanel/presentations
+#+REVEAL_TRANS: fade
+#+REVEAL_THEME: jenkinsworld
+
+#+REVEAL_SLIDE_HEADER:
+#+REVEAL_SLIDE_FOOTER: 
+#+REVEAL_MARGIN:0.01
+
+#+Title: Making the best out of Jenkins on Kubernetes and Openshift
+#+Author: Ioannis Canellos
+#+Email: iocanel@gmail.com
+* 
+  [[./images/title-all-logos.png]]
+* about me
+  [[./images/aboutme.png]]
+  + principal software engineer @red hat
+  + member @apache software foundation
+* agenda  
+  + getting started
+  + plugin overview
+  + advanced topics
+  + tips
+  + q & a  
+* getting started
+  + docker images
+    + jenkins
+      + community
+      + openshift 
+    + agents
+  + kubernetes manifests
+* scaling jenkins
+  jenkins scales using agents
+  + on demand 
+  + adhoc
+* build platform 
+  each build requires a set of tools, but who configures?
+  + different tools?
+  + different tool versions?
+  duplicating configuration
+* docker pipeline
+  package tools into containers, reference containers via pipelines
+
+  + pros:
+    + easy to use
+    + reproducible
+  + cons:
+    + requires docker binaries (cli)
+    + requires docker access (socket)
+    + no support for kubernetes specific resources (e.g. secrets)
+** using docker pipeline
+   #+BEGIN_SRC groovy
+   node {
+     docker.image('golang').inside {
+       git 'https://github.com/iocanel/hello-go.git'
+       sh 'go build -o bin/helloworld helloworld.go'
+     }
+   }
+   #+END_SRC
+** adding docker build
+   #+BEGIN_SRC groovy
+   node {
+     docker.image('golang').inside {
+       git 'https://github.com/iocanel/hello-go.git'
+       sh 'go build -o bin/helloworld helloworld.go'
+       docker.build('iocanel/hello-go')
+     }
+   }
+   #+END_SRC
+* kubernetes pipeline pt. 1
+   1st attempt: port docker pipeline to kubernetes
+   + pros:
+     + support for kubernetes resources
+   + cons:
+     + requires shared file system
+* kubernetes plugin
+  co-locate/sidecar agent with build tools to lift sharing limitations
+  + pros:
+    + runs everywhere
+  + cons:
+    + verbose 
+    + not as intuitive as the docker/kubernetes pipeline
+** using kubernetes plugin
+   #+BEGIN_SRC groovy
+   podTemplate(name:'mypod', label: 'provides-go', containers: [
+    containerTemplate(name: 'golang', image: 'golang:1.8.0', ttyEnabled: true, command: 'cat')]) {
+       node('provides-go') {
+          container('golang') {
+            git 'https://github.com/iocanel/hello-go.git'
+            sh 'go build -o bin/helloworld helloworld.go'
+          }
+       }
+    }
+   #+END_SRC
+* kubernetes pipeline pt. 2
+  re-write on top of kubernetes plugin to have best of both worlds
+  + pros:
+    + hides complexity
+  + cons:
+    + its experimental
+* testing
+   Testing individual projects is not enough 
+   + integration testing
+   + system testing
+* arquillian cube
+  [[./images/cube-k8s-os3.png]]
+* arquillian cube pt.2
+   A tool to simplify integration/system testing on kubernetes 
+   + generate a test namespace / project
+   + deploy all required resources
+     + supports f-m-p
+     + supports shell scripts
+     + supports dependencies
+   + wait until everything is ready
+   + run the test suite
+   + inject resources
+   + simplify service access
+* arquillian cube limitations
+  Arquillian cube rocks, but has some limitations:
+  + it mostly aims java
+* arquillian steps
+  An arquillian cube wrapper to use in your pipelines.
+  + manage test namespaces/projects
+  + setup test environments
+  + validate test environments
+  + clean things up
+** creating a test namespace
+   #+BEGIN_SRC groovy
+   inNamespace(prefix: 'testns') {
+     def namespace = currentNamespace()
+     sh "What happens in ${namespace} stays in ${namespace}"
+   }
+   #+END_SRC
+** setting up environment
+   #+BEGIN_SRC groovy
+   inNamespace(prefix: 'testns') {
+        createEnvironment(environmentConfigUrl: "file:${env.WORKSPACE}/kubernetes.yml")
+        stage('run system tests') {
+        }
+   }
+   #+END_SRC
+* deployments      
+  Multiple ways to deploy...
+   + Arquillian steps:
+   #+BEGIN_SRC groovy
+   createEnvironment(environmentConfigUrl: "file:${env.WORKSPACE}/kubernetes.yml")
+   #+END_SRC
+   + Openshift jenkins plugin:
+   #+BEGIN_SRC groovy
+   openshiftCreateResources(yaml:  "file:${env.WORKSPACE}/kubernetes.yml")
+   #+END_SRC
+  + manual / cli
+* tips   
+  [[./images/light-bulp.png]]
+* use secrets
+   #+BEGIN_SRC groovy
+domain = Domain.global()
+store = Jenkins.instance
+               .getExtensionList('com.cloudbees.plugins.credentials.SystemCredentialsProvider')[0]
+               .getStore()
+
+githubAccount = new UsernamePasswordCredentialsImpl(
+        CredentialsScope.GLOBAL,
+        "github", "Github Account Credentials",
+        new File('/mnt/secrets/github/username').text
+        new File('/mnt/secrets/github/token').text
+)
+
+githubAccessToken = new StringCredentialsImpl(
+        CredentialsScope.GLOBAL,
+        "githubaccesstoken",
+        "Github Access Token",
+        Secret.fromString(new File('/mnt/secrets/github/token').text))
+
+store.addCredentials(domain, githubAccount)
+store.addCredentials(domain, githubAccessToken)
+   #+END_SRC
+* correlate jobs with pods
+  sometimes the console is not enough
+  + describe pods
+  + inspect pods
+  + exec into pods
+  #+BEGIN_SRC groovy
+    def mylabel = "${env.JOB_NAME}" +
+               "_" +
+               "${env.BUILD_NUMBER}"
+               .replaceAll('[^A-Za-z0-9]', '_')
+    
+    podTemplate(label: "$mylabel") { ... }
+  #+END_SRC
+* composition vs inheritance
+  no need to create new images just to add a single binary
+   #+BEGIN_SRC groovy
+   podTemplate(name:'mypod', label: 'provides-maven-and-oc', containers: [
+    containerTemplate(name: 'maven', image: 'maven', ttyEnabled: true, command: 'cat'),
+    containerTemplate(name: 'oc', image: 'openshift/origin:v1.5.0-rc.0', 
+                      ttyEnabled: true, command: 'cat')]) {
+       node('provider-maven-and-oc') {
+          stage 'copy oc to workspace'
+          container('openshift') {
+            sh 'mkdir ${HOME}/bin && cp $(which oc} ${HOME}/bin'
+          }
+          stage 'build and create environment'
+          container('maven') {
+            sh 'mvn clean install && ${HOME}/bin/oc create -f target/openshift.yml'
+
+          }
+       }
+    }
+   #+END_SRC
+* use pipeline libraries
+  not everyone is a pipeline guru...
+  + promote readability
+  + promote reusability
+  + hide implementation details
+* love thy CI/CD ...
+  + use source control for everything
+  + collocate code and pipelines
+  + no snapshots no latest
+* resources
+  This presentation:
+  + https://github.com/iocanel/presentations
+
+  Plugins:
+  + https://github.com/jenkinsci/kubernetes-plugin
+  + https://github.com/jenkinsci/kubernetes-pipeline-plugin
+  + https://github.com/openshift/jenkins-plugin
+
+  Pipeline Libraries:
+  + https://github.com/fabric8io/fabric8-pipeline-library
+  + https://github.com/syndesisio/syndesis-pipeline-library
+
+* people to follow
+|-------------------------------+----------------|
+| [[./images/people/csanchez.png]]  | Carlos Sanchez |
+| [[./images/people/jstrachan.png]] | James Strachan |
+| [[./images/people/jrawlings.png]] | James Rawlings |
+   
+* questions?
+[[./images/questionmark.png]]
+* the end
+  Thank you!
