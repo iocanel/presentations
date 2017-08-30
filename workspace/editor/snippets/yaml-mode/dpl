@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: Deployment
+# key: dpl
+# --
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata: 
+  name: ${1:mydeployment}
+  labels:
+    app: $1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: $1
+        name: $1
+    spec:
+      containers:
+      - image: ${2:myimage}
+        imagePullPolicy: IfNotPresent
+        name: $1
+        env:
+        ports:
+        volumeMounts:
+        securityContext:
+          runAsUser: 0
+          privileged: true
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      serviceAccount: ${3:myserviceaccount}
+      serviceAccountName: $3
+      volumes:

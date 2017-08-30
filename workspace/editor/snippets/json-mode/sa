@@ -1,0 +1,12 @@
+#key: sa
+#name: Service Account
+#contributor: Ioannis Canellos <iocanel@gmail.com>
+# --
+"apiVersion": "v1",
+"kind": "ServiceAccount",
+"metadata": {
+    "name": "${1:myserviceaccount}",
+    "labels": {
+        "app": "$1"
+    }
+}

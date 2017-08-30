@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name:Service
+# key: srv
+# --
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${1}
+  labels:
+    app: $1
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: ${2}
+    port: ${3}
+    protocol: TCP
+    targetPort: ${4}
+  selector:
+    name: $1
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

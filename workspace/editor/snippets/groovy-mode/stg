@@ -1,0 +1,6 @@
+# key: stg
+# name: Pipeline Stage
+# --
+stage('${1:mystage}') {
+  $0
+}

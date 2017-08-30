@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Empty Dir Volume
+# key: ved
+# --
+emptyDir: 
+name: ${1}
+$0

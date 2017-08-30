@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Kubernetes List
+# key: klist
+# --
+apiVersion: v1
+kind: List
+items:
+- $0

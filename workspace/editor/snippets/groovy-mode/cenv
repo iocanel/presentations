@@ -1,0 +1,4 @@
+# key: cenv
+# name: Create Environment
+# --
+createEnvironment(environmentConfigUrl: "${1:file:\${env.WORKSPACE}/kubernetes.yml}")

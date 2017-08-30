@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Dokcer Pipeline Build
+# key: dpb
+# --
+docker.build('${1}')$0

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Simple Docker Pipeline
+# key: sdp
+# --
+node {
+    docker.image('${1:image}').inside {
+    git 'https://github.com/iocanel/${2:helloworld}.git'
+       sh '$0'
+    }
+}

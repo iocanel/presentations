@@ -1,0 +1,9 @@
+# key: sa
+# name: Service Account
+# --
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ${1:myserviceaccount}
+  labels:
+    app: $1

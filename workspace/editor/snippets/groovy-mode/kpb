@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Kubernetes Build Image
+# key: kpb
+# --
+kubernetes.image().build('${1}')$0
