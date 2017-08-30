@@ -16,6 +16,10 @@ During the demo two custom images have been used:
 
 Configuration for installing Jenkins on Kubernetes: [kubernetes.yml](workspace/kubernetes/kubernetes.yml)
 
+## Demo Project
+
+The demo project which was used for as a target for writing pipelines can be found at: [hello golang](https://github.com/iocanel/hello-go).
+
 ## Editor configration and setup
 
 During the demo [spacemacs](https://github.com/syl20bnr/spacemacs) has been used, to:
