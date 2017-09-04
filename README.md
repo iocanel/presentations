@@ -20,7 +20,7 @@ Configuration for installing Jenkins on Kubernetes: [kubernetes.yml](workspace/k
 
 The demo project which was used for as a target for writing pipelines can be found at: [hello golang](https://github.com/iocanel/hello-go).
 
-## Editor configration and setup
+## Editor configuration and setup
 
 During the demo [spacemacs](https://github.com/syl20bnr/spacemacs) has been used, to:
 
