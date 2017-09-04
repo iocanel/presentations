@@ -18,7 +18,7 @@ Configuration for installing Jenkins on Kubernetes: [kubernetes.yml](workspace/k
 
 ## Demo Project
 
-The demo project which was used for as a target for writing pipelines can be found at: [hello golang](https://github.com/iocanel/hello-go).
+The demo project which was used as a target for writing pipelines can be found at: [hello golang](https://github.com/iocanel/hello-go).
 
 ## Editor configuration and setup
 
@@ -30,7 +30,7 @@ During the demo [spacemacs](https://github.com/syl20bnr/spacemacs) has been used
 - Run pipelines from within the editor
 
 Here is my custom [spacemacs configuration](workspace/editor/.spacemacs).
-This configuration makes uses of a [custom script to ivoke jenkins pipelines remotely](workspace/editor/run-jenkins-pipeline).
+This configuration uses of a [custom script to invoke jenkins pipelines remotely](workspace/editor/run-jenkins-pipeline).
 All the groovy and yml snippets used in the demo (are based on yas snippet) can be found [here](workspace/editor/snippets).
 
 ## Other presentations
