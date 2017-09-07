@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><p class="date">Created: 2017-09-07 Thu 14:31</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-org1da5527">1. My presentations</a>
+<ul>
+<li><a href="#/slide-orgc1a2a92">1.1. Conferences</a></li>
+<li><a href="#/slide-orgc15fd11">1.2. Other</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org1da5527">
+<h2 id="org1da5527"><span class="section-number-2">1</span> My presentations</h2>
+<p>
+A repository for my presnetations
+</p>
+
+</section>
+<section id="slide-orgc1a2a92">
+<h3 id="orgc1a2a92"><span class="section-number-3">1.1</span> Conferences</h3>
+<ul>
+<li><a href="https://github.com/iocanel/presentations/tree/2014-devnation-introduction-to-fabric8">DevNation 2014: Introduction to Fabric8</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2014-devnation-fabric8-deep-dive">DevNation 2014: Fabric8: Depp Dive</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2014-javasi-introduction-to-fabric8">JavaSi 2014: Introduction to Fabric8</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2015-fosscom-kubernetes-for-java-developers">FOSSCOM 2015: Kubernetes for Java Developers</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2016-voxxed@thessaloniki-getting-started-with-microservices-on-kubernetes">Voxxed Thessaloniki 2016: Getting started with microservices on Kubernetes</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2017-jbcnconf-spring-cloud-kubernetes">JBCNConf 2017: Spring Cloud Kubernetes</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2017-jenkinsworld-making-the-best-out-of-jenkins-on-kubernetes-and-openshift">Jenkins World 2017: Making the best out of Jenkins on Kubernetes and Openshift</a></li>
+
+</ul>
+</section>
+<section id="slide-orgc15fd11">
+<h3 id="orgc15fd11"><span class="section-number-3">1.2</span> Other</h3>
+<ul>
+<li><a href="https://github.com/iocanel/presentations/tree/2013-fusef2f-whats-new-in-fuse-fabric-7-3">Fuse Face2Face 2013: What's new in Fuse Fabric 7.3</a></li>
+<li><a href="https://github.com/iocanel/presentations/tree/2017-fuseeng-syndesis-ci-cd">Fuse Engineering Meeting May 2017: Syndesis CI/CD</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
