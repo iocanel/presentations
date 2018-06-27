@@ -3,6 +3,9 @@ A repository for my presnetations
 
 ## Conferences
 
+- [Java One 2011: Apache Karaf Cellar](https://github.com/iocanel/presentations/tree/2011-javaone-apache-karaf-cellar)
+- [Camel One 2012: Apache Karaf Cellar and Fuse Fabric](https://github.com/iocanel/presentations/tree/2012-camelone-apache-karaf-cellar-and-fuse-fabric)
+- [Camel One 2013: Advanced Integration Testing with Fuse Fabric](https://github.com/iocanel/presentations/tree/2013-camelone-advanced-integration-testing-with-fuse-fabric)
 - [DevNation 2014: Introduction to Fabric8](https://github.com/iocanel/presentations/tree/2014-devnation-introduction-to-fabric8)
 - [DevNation 2014: Fabric8: Depp Dive](https://github.com/iocanel/presentations/tree/2014-devnation-fabric8-deep-dive)
 - [JavaSi 2014: Introduction to Fabric8](https://github.com/iocanel/presentations/tree/2014-javasi-introduction-to-fabric8)
