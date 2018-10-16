@@ -1,0 +1,21 @@
+# key: srvnp
+# name: Node Port Service
+# --
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${1:myservice}
+  labels:
+    app: $1
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: ${2:http}
+    port: ${3:80}
+    protocol: TCP
+    targetPort: ${4:8080}
+    nodePort: 300$3
+  selector:
+    name: $1
+  sessionAffinity: None
+  type: NodePort

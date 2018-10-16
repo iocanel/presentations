@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Host Path Volume
+# key: vhp
+# --
+name: ${1}
+hostPath:
+  path: ${2}

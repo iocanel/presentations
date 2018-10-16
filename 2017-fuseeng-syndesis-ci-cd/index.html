@@ -1,0 +1,507 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Syndesis CI/CD</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style type="text/css">
+            .reveal div.header-left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                margin: 0;
+				font-size: 50%;
+            }
+            .reveal div.header-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 0;
+                margin: 0;
+				font-size: 50%;
+            }
+            .reveal div.footer-left {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0;
+                margin: 0;
+				font-size: 50%;
+            }
+            .reveal div.footer-right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 0;
+                margin: 0;
+				font-size: 50%;
+            }
+			.reveal div.footer-center {
+				position: fixed;
+                bottom: 0;                    
+			    text-align: center;
+                padding: 0;
+                margin: 10;
+				width: 100%;
+				font-size: 50%;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">			
+			<div class="slides">
+				<section>
+					<h3>syndesis CI/CD</h3>
+				</section>
+				<section>
+					<h3>Overview</h3>
+					<ul>
+						<li>goals</li>							
+						<li>tools</li>
+						<li>implementations</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Goals</h3>
+					<ul>
+						<li>pull request validation</li>							
+						<li>continous delivery</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Validate what?</h3>
+					<ul>
+						<li>code</li>
+						<li>images</li>							
+						<li>configuration</li>
+						<li>pipelines</li>
+					</ul>
+					<p>we need to test how things work together!</p>
+				</section>				
+				<section>
+					<h3>How to validate?</h3>
+					<ul>
+						<li>unit testing</li>							
+						<li>integration testing</li>
+						<li>end to end testing</li>
+					</ul>
+				</section>
+				<section>
+					<h3>End to End testing</h3>
+					<ul>
+						<li>create or use an existing environment</li>							
+						<li>test actual use cases/scenarios</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Create an environment</h3>
+					<ul>
+						<li>custom scripts (e.g. Bash)</li>							
+						<li>pipelines (e.g. Jenkins)</li>
+						<li>testing framework (e.g. Arquillian Cube)</li>
+						<li>mix and match (more on that later)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Arquillian Cube</h3>
+					<ul>
+						<li>testing framework for containerized apps</li>							
+						<li>initially target docker</li>
+						<li>united individual efforts around Kubernetes</li>
+							<ul>
+								<li>Fabric8</li>
+								<li>Cloud Enablement</li>
+							</ul>		
+					</ul>
+				</section>
+				<section>
+					<h3>Arquillian Cube Kubernetes</h3>
+					<p>Black box testing for Kubernetes</p>
+					<ul>
+						<li>create or reuse an existing environment</li>												
+						<li>ensure environment is ready</li>
+						<li>manage test lifecycle</li>						
+						<li>Kubernetes resource provider</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How can arquillian cube kubernetes create an environment?</h3>
+					<ul>
+								<li>fabric8-maven-plugin</li>
+								<li>yml / json manifests</li>
+								<li>shell scripts</li>
+								<li>dependencies</li>	
+									<ul>														
+										<li>using the classpath</li>
+										<li>using the pom.xml</li>
+										<li>explicitly: one or more URL (e.g. mvn:my/dep/1.0)</li>
+									</ul>	
+								</ul>					
+				</section>	
+				<section>
+					<h3>Examples</h3>
+					<ul>
+						<li><a href="https://github.com/spring-cloud-incubator/spring-cloud-kubernetes/blob/master/spring-cloud-kubernetes-examples/kubernetes-hello-world-example/src/test/resources/arquillian.xml" target="_blank">Minimal example</a></li>
+						<li><a href="https://github.com/syndesisio/syndesis-system-tests/blob/master/src/test/resources/arquillian-ideal.xml" target="_blank">Using an Openshift Template</a></li>
+						<li><a href="https://github.com/syndesisio/syndesis-system-tests/blob/master/src/test/resources/arquillian.xml" target="_blank">An exmaple using Shell Scripts</a></li>
+					</ul>			
+					<p>a few words on how template parameters and env varialbes are used</p>		
+				</section>
+				<section>
+					<h3>Ensure environment is ready</h3>
+					<ul>
+						<li>Using resources</li>
+						<ul>
+							<li>delegate to the client</li>
+						</ul>
+						<li>Using scripts</li>
+						<ul>
+							<li>framework is unaware of the installed resources</li>
+							<li>requires us to be explicit on what are the resource to wait for</li>
+						</ul>
+					</ul>
+					<p>when readiness fails...</p>					
+				</section>
+				<section>
+					<h3>Kubernetes Resource Provider</h3>
+					<ul>
+						<li>session object</li>
+						<li>kubernetes-client</li>
+						<li>deployments, pods, service etc</li>
+						<li>urls to services</li>
+						<ul>
+							<li>internally: ip or dns</li>
+							<li>externally: portforward</li>
+						</ul>	
+					</ul>
+				</section>
+				<section>
+					<h3>Examples</h3>
+					<ul>					
+						<li><a href="https://github.com/syndesisio/syndesis-system-tests/blob/master/src/test/java/io/syndesis/systests/DeploymentTest.java" target="_blank">Inject client and deployment resources</a></li>
+						<li><a href="https://github.com/syndesisio/syndesis-system-tests/blob/master/src/test/java/io/syndesis/systests/IPaaSRestTest.java" target="_blank">Inject service urls with portforwarding</a></li>
+					</ul>			
+					<p>we can hook kubernetes-assertions or selenium...</p>		
+				</section>
+				<section>
+					<h3>Openshift specific features</h3>
+					<p>on top of the kubernetes functionality</p>
+					<ul>
+						<li>supports openshift builds</li>
+						<li>in container testing</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Benefits</h3>	
+					<ul>		
+						<li>flexibility</li>
+						<li>rich feedback</li>
+						<li>development transparency</li>
+					</ul>					
+				</section>					
+				<section>
+					<h3>Limitations</h3>
+					<p>while it can test modules written in any language...</p>	
+					<ul>
+						<li>it mostly makes sense for java</li>
+						<li>it can/could get in the way of your app</li>
+						<ul>
+							<li>vert.x issues</li>
+							<li>spring-cloud-kubernetes issues</li>
+							<li>solution? <a href="https://github.com/arquillian/arquillian-cube/blob/master/kubernetes/kubernetes/src/main/java/org/arquillian/cube/kubernetes/impl/namespace/DefaultNamespaceService.java" target="_blank">poor mans modularity</a>
+						</ul>	
+					</ul>					
+				</section>	
+				<section>
+					<h3>What else do we need?</h3>	
+					<ul>
+						<li>a more ployglot end to end testing solution</li>
+						<li>continous deployment</li>
+					</ul>			
+				</section>																																								
+				<section>
+					<h3>Jenkins Pipelines</h3>	
+					<p><b>Jenkins definition</b></p>
+					<i>Jenkins Pipeline is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins</i>				
+					<p><b>My definition</b></p>
+					<i>A more <b>groovy</b> way of doing devops with Jenkins</i>
+				</section>
+				<section>
+					<h3>Pipeline Example</h3>	
+					<pre>
+					<code>
+node {	
+	git 'https://github.com/syndesisio/syndesis-rest.git'
+	withEnv(["PATH+MAVEN=${tool 'm3'}/bin"]) {
+		sh 'mvn clean install'
+	}
+}
+					</code>
+					</pre>
+					<p>what issues do you see?</p>
+					<ul>						
+						<li class="fragment">requires preinstalled tools</li>
+						<li class="fragment">can't access volumes</li>
+						<li class="fragment">we need a way of creating slaves</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Dokcer Pipeline Example</h3>	
+					<pre>
+					<code>
+node {	
+	git 'https://github.com/syndesisio/syndesis-rest.git'
+	docker.image('maven:3.3.9').inside {
+		sh 'mvn clean install'
+	}
+}
+					</code>
+					</pre>
+					<p>better, are there more issues?</p>
+					<ul>
+						<li class="fragment">requires access to docker daemon</li>
+						<li class="fragment">requires access to host path (docker volumes)</li>
+						<li class="fragment">can't access secrets, configmaps and more</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Kubernetes Pipeline Example</h3>
+					<p>our early attempts to kubernetes pipelines</p>	
+					<pre>
+					<code>
+node {	
+	git 'https://github.com/syndesisio/syndesis-rest.git'
+	kubernetes.pod('buildpod').withImage('maven').inside {  
+		sh 'mvn clean install'
+	}
+}
+					</code>
+					</pre>
+					<p>doesn't require access to docker, but still...</p>
+					<ul>
+						<li class="fragment">requires access to shared filesystem</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Why does 'sh' require shared filesystem?</h3>
+					<p>Any node needs to share fs in order to</p>
+					<ul>
+						<li class="fragment">send `code` to the `executor`</li>
+						<li class="fragment">monitor the execution</li>
+					</ul>
+				</section>
+				<section>
+					<h3>If you can't beat them, join them!</h3>
+					<p>join what?</p>
+					<ul>
+						<li>a container acting as slave</li>
+						<li>with the actual build container</li>
+					</ul>
+					<p>sidecar pattern using the <a href="https://github.com/jenkinsci/kubernetes-plugin" target="_blank">Kubernetes Plugin</a></p>
+				</section>	
+				<section>
+					<h3>Kubernetes plugin</h3>
+					<p>plugin to create dynamic slaves using pods</p>
+
+					<ul>
+						<li>use preconfigured templates (for <a href="https://jenkins-syndesis-ci.b6ff.rh-idev.openshiftapps.com/configure" target="_blank">example</a>)</li>
+						<li>select a template using pipelines</li>
+					</ul>															
+				</section>	
+				<section>
+					<h3>Kubernetes plugin and pipelines</h3>
+					<ul>
+						<li>define pod templates using pipelines</li>
+						<li>support for `sh` in any container of template</li>
+					</ul>		
+					<pre>
+						<code>
+podTemplate(label: 'mypod', 
+	containers: [
+	containerTemplate (
+		name: 'maven',
+		image: 'maven:3.3.9)]) {
+
+    node('mypod') { <!-- select the template-->
+    	git 'https://github.com/syndesisio/syndesis-rest.git'
+        container('maven') {            
+        	sh 'mvn clean install'
+        }
+    }        
+}
+						</code>
+					</pre>													
+				</section>	
+				<section>
+					<h3>Using additional containers</h3>		
+					<pre>
+						<code>
+podTemplate(label: 'mypod', 
+	containers: [
+		containerTemplate(
+			name: 'maven',
+			image: 'maven:3.3.9),
+		containerTemplate(
+			name: 'openshift', 
+			image: 'openshift/origin:v1.5.0']) {
+
+    node('mypod') { <!-- select the template-->
+	git 'https://github.com/syndesisio/systests.git'
+
+	container('maven') {            
+		sh 'cp $(which oc) ${workspace}'
+	}
+	container('maven') {            
+		sh """"
+		cp ${workspace}/oc /usr/local/bin/oc 
+		mvn clean install
+		""""
+	}
+  }        
+}
+						</code>
+					</pre>													
+				</section>
+				<section>
+					<h3>Pipeline Libraries</h3>
+					<p>verbosity can become an issue...</p>
+					<ul>
+						<li>wrap resuable parts into functions</li>
+						<li>create your own DSL</li>
+					</ul>																
+				</section>	
+				<section>
+					<h3>Function Examples</h3>
+					<ul>
+					<li><a href="https://github.com/syndesisio/syndesis-pipeline-library/blob/master/vars/withOpenshift.groovy" target="_blank">withOpenshift function</a></li>															
+					<li><a href="https://github.com/syndesisio/syndesis-pipeline-library/blob/master/vars/withMaven.groovy" target="_blank">withMaven function</a></li>
+					<li><a href="https://github.com/syndesisio/syndesis-pipeline-library/blob/master/vars/test.groovy" target="_blank">system test function</a></li>
+					<li><a href="https://github.com/syndesisio/syndesis-rest/blob/master/Jenkinsfile-rollout" target="_blank">putting everything together</a></li>
+					</ul>
+				</section>	
+				<section>
+					<h3>Are we done?</h3>
+					<p>not eveything is in java</p>
+					<ul>
+						<li>syndesis-ui is in java/typescript</li>
+						<li>so are the QE end to end tests</li>
+					</ul>
+					<p>so we need a polyglot variation of arquillian-cube-kubernetes</p>
+				</section>
+				<section>
+					<h3>Introducing cube pipeline plugin for Jenkins</h3>
+					<p>a simple wrapper around cube kubernetes</p>
+					<ul>
+						<li>configures cube using pipelines</li>
+						<li>dsl for managing testing namespaces</li>
+						<li>dsl for setting up the test environment</li>
+					</ul>	
+					<p>did I mention that is has a really cool dsl?</p>
+				</section>	
+				<section>
+					<h3>Examples</h3>
+					<pre>
+						<code>
+cube.namespace().withCloud('openshift')
+				.withPrefix('e2e')
+				.inside {
+				
+	stage 'building'
+	//do building stuff
+
+	cube.environment()
+        .withEnvConfigUrl('https://raw.githubusercontent.com/syndesisio/openshift-templates/master/syndesis.yml')
+        .create()
+
+	stage 'testing'
+	//do testing stuff		
+}
+						</code>
+					</pre>
+				</section>																																																																					<section>
+					<h3>A real example</h3>		
+					<a href="https://jenkins-syndesis-ci.b6ff.rh-idev.openshiftapps.com/job/syndesis-rest-wip/" target="_blank">syndesis-rest with pipelines</a>		
+				</section>
+				<section>
+					<h3>Our Jenkins image</h3>
+					<ul>
+						<li>built on top of <a href="https://github.com/openshift/jenkins" target="_blank">openshift/jenkins</a></li>
+						<li>custom <a href="https://github.com/syndesisio/syndesis-jenkins/tree/master/configuration/jobs" target="_blank">jobs</a></li>
+						<li>custom <a href="https://github.com/syndesisio/syndesis-jenkins/tree/master/plugins" target="_blank">plugins</a></li>
+						<li>custom <a href="https://github.com/syndesisio/syndesis-jenkins/blob/master/configuration/init.groovy.d/setup-github-credentials.groovy" target="_blank">credentials</a> for syndesis repos and e2e</li>						
+					</ul>									
+				</section>
+				<section>
+					<h3>Why are jobs manually configured?</h3>
+					<p>some notes on github organization folder plugin</p>
+					<ul>
+						<li>seems dead</li>
+						<li>can't configure retest phraze on organization level</li>
+					</ul>									
+				</section>										
+				<section>
+					<h3>Our CI templates</h3>
+					<p>a look in our ci templates...</p>
+					<a href="https://github.com/syndesisio/syndesis-ci" target="_blank">... on github</a>				
+				</section>
+				<section>
+					<h3>Current problems</h3>
+					<ul>
+						<li>rebranding hickups</li>
+						<li>stabilize e2e tests</li>
+					</ul>					
+				</section>				
+				<section>
+					<h3>Future tasks</h3>
+					<ul>
+						<li>syndesis-ci</li>
+						<li>public docker images to dockerhub</li>
+						<li>closer integration with fabric8</li>
+					</ul>					
+				</section>
+				<section>
+					<h3>Questions?</h3>
+				</section>
+			</div>
+			<div class='footer-center'>
+    			<i>ioannis canellos - fuse engineering - may 2017</i>
+		  	</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

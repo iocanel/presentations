@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Kubernetes for Java Developers</title>
+
+		<meta name="description" content="An introduction to Kubernetes from the Java Developer perspective">
+		<meta name="author" content="Ioannis Canellos">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=2.0, user-scalable=no">
+        <link rel="icon" type="image/png" src="images/kubernetes.png" />
+		<link rel="stylesheet" href="css/reveal.min.css">
+        <!--link rel="stylesheet" href="css/print/pdf.css"-->
+
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>			
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+                    <!--iframe src="http://istation:8181" tyle="width: 90%; height="90%" scrolling="no"/-->
+					<h2>Kubernetes</h2>
+                    
+					<img width="396" height="306" src="images/kubernetes.png" alt="Kubernetes Logo">
+				    <h2>for Java Developers</h2>
+					<p>
+                        
+						<small>by <a href="http://iocanel.blogspot.com">Ioannis Canellos</a> / <a href="http://twitter.com/iocanel">@iocanel</a></small>
+					</p>
+				</section>
+				<section>
+						<h2>about me...</h2>
+						<p>
+							principal software engineer at <font color="red">Red Hat</font>
+						</p>		
+						<p>
+							member at the Apache Software Foundation
+						</p>									
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+						<h2>agenda</h2>
+						<p>
+							what is Kubernetes?
+						</p>
+						<p>
+							what problem does it solve?
+						</p>		
+						<p>
+							dive into Kubernetes
+						</p>
+                        <p>
+                            developers tools
+                        </p>						
+						<p>
+							questions &amp; answers
+						</p>
+					
+				</section>
+				<section>
+					<section>
+						<h2>so, what is kubernetes?</h2>
+			    	</section>
+					<section>
+                        <h2>an orchestration system</h2>
+                        <h2>for containerized apps...</h2>
+							<img width="500" height="300" src="images/k8-ocean-of-containers.png" alt="Kubernetes Diagram">
+			    	</section>
+                    <section>
+                        <h2>an containerized what?</h2>
+                        <p>an application packaged with its operation environment</p>
+                        <p>an alternative to virtualization</p>
+                        <p class="fragment">...with lower footprint</p>
+                        <p class="fragment">...and added coolness</p>
+			    	</section>
+					<section>
+						<h2>what does it do?</h2>
+						<ul>
+							<li class="fragment">
+      						  schedule containers to multiple nodes
+    					  </li>
+    					  <li class="fragment">
+    						  manage container lifecycle
+    					  </li>
+    					  <li class="fragment">
+    						  provide a transparent way discovering and using services
+    					  </li>
+  						</ul>
+			    	</section>
+			    </section>
+
+				<section>
+					<section>
+						<h2>what problem does it try to solve?</h2>
+                        <img width="500" height="400" src="images/confused.png" alt="Confused"/>
+					</section>                    
+					<section>
+						<h2>modern enterprise software</h2>
+						<ul>
+					      <li class="fragment">
+      						 steering away from the monolith app
+    					  </li>
+    					  <li class="fragment">
+    						 distrbuted components and services
+    					  </li>
+  						</ul>
+					</section>
+					<section>
+						<h2>new challenges</h2>
+						<ul>
+                           <li class="fragment">
+        					discovery of services
+      					  </li>
+  						  <li class="fragment">
+        					testing complexity
+      					  </li>
+                          <li class="fragment">
+    				        delivery complexity
+    					  </li>
+  						</ul>
+					</section>
+					<section>
+                        <h2>common problems</h2>				
+						<ul>
+							<li class="fragment">
+      						  it works on my machine
+    					  </li>
+					  </ul>
+					</section>
+                    <section>
+                        <h2>what do we need?</h2>				
+						<ul>
+							<li class="fragment">
+      						  a consistent experience accross all environments
+    					  </li>
+					  </ul>
+					</section>
+                </section>
+				<section>
+					<section>
+						<h2>docker</h2>
+                        <img src="images/docker-logo.png" alt="Docker Logo"/>
+					</section>
+                    <section>
+						<h2>what is docker?</h2>
+                        <p class="fragmet">a deamon</p>
+                        <ul>
+						  <li class="fragment">package your application</li>
+                          <li class="fragment">ship your application</li>
+					    </ul>
+					</section>
+                    <section>
+						<h2>docker example</h2>
+                        <p>this presentation</p>
+                        <pre><code data-trim contenteditable>
+FROM scratch
+  
+COPY bin/servehttp /usr/local/bin/servehttp
+COPY slides /usr/local/share/slides
+EXPOSE 8080  
+CMD ["/usr/local/bin/servehttp", "/usr/local/share/slides"]
+						</code></pre>
+                         <pre class="fragment fade-in"><code data-trim contenteditable>
+docker build -t iocanel/fosscomm2015 .                         
+						</code></pre>
+                         <pre class="fragment fade-in"><code data-trim contenteditable>
+docker run -p 8080:8080 iocanel/fosscomm2015                         
+						</code></pre>                        
+					</section>
+                    <section>
+						<h2>docker vs vm</h2>
+                        <img src="images/vm-vs-docker.png" alt="VMs vs Docker"/>
+					</section>
+                    <section>
+						<h2>docker vs lxc</h2>
+                        <img src="images/lxc-vs-docker.png" alt="LXC vs Docker"/>
+					</section>
+                    <section>
+						<h2>what to remember</h2>
+                        <p>
+                            <ul>
+                                <li>tiny footprint</li>
+                                <li>extremely fast</li>
+                            </ul>
+                        </p>
+					</section>
+				</section>
+                <section>
+					<section>
+						<h2>kubernetes</h2>
+                        <img src="images/kubernetes.png" width="400" height="400" alt="Kubernetes Logo"/>					
+					</section>
+                    <section>
+						<h2>an overview</h2>
+                        <img src="images/kubernetes-architecture.png" alt="Kubernetes Architecutre"/>					
+					</section>
+                    <section>
+						<h2>pod</h2>   
+                        <p>A group of containers</p>
+                        <img src="images/pod.png" alt="Pod"/>
+                        <p>share host</p>
+                        <p>share volumes</p>
+					</section>
+                    <section>
+						<h2>replication controller</h2>   
+                        
+                        <img src="images/replication-controller.png" alt="Replication Controller"/>
+					</section>
+                    <section>
+						<h2>service</h2>  
+                        <img src="images/services.png" width="500" height="500" alt="Services"/>
+					</section>
+                    <section>
+						<h2>volumes</h2>     
+                        <p>container fs is ephemeral</p>
+                        <p>persistent storage</p>
+					</section>
+                    <section>
+						<h2>secrets</h2>         
+                        <p>volumes for storing "sensitive" info</p>
+                        <ul>
+                            <li>credentials</li>
+                            <li>ssh keys</li>                            
+                        </ul>
+					</section>    
+				</section>
+                <section>
+					<section>
+						<h2>openshift</h2>
+                        <img src="images/openshift-logo.png" width="400" height="400" alt="Openshift Logo"/>					
+                        <p>A PaaS that combines docker, kubernetes and more...</p>
+					</section>
+				</section>
+                <section>
+					<section>
+						<h2>fabric8</h2>
+                        <img src="images/fabric8_logo.png" width="400" height="400" alt="Fabric8 Logo"/>					
+                        <p>devops and integration platform for Kubernetes and OpenShift</p>
+                        <p>awesome tooling</p>
+					</section>
+                    <section>
+						<h2>client</h2>  
+                        <p class="fragment">json and yml are nice...</p>
+                        <p class="fragment">a java dsl is even nicer !!!</p>
+					</section>
+                    <section>
+						<h2>json format</h2>  
+                                               <pre><code data-trim contenteditable>
+{
+   "kind": "Service",
+   "apiVersion": "v1",
+   "metadata": {
+       "name": "myservice"
+   },
+   "spec": { "ports": [ {
+              "protocol": "TCP",
+              "port": 80,
+              "targetPort": 8080,
+          } ],
+      "selector": {
+          "key": "value1",
+      },
+      "portalIP": "172.30.234.134",
+      "type": "ClusterIP",
+  }
+						</code></pre>
+					</section>
+                                        <section>
+						<h2>java dsl</h2>  
+                                               <pre><code data-trim contenteditable>
+client.services().createNew()
+          .withNewMetadata()
+              .withName("myservice")
+          .and()
+          .withNewSpec()
+            .addNewPort()
+              .withProtocol("TCP")
+              .withPort(80)
+              .withNewTargetPort(8080)
+            .and()
+            .addToSelector("key1", "value1")
+            .withPortalIP("172.30.234.134")
+            .withType("ClusterIP")
+          .and()
+          .done();					</code></pre>
+					</section>
+                    <section>
+					   <h2>maven plugin</h2>
+                        <p>generates json</p>
+                        <p>interacts with kubernetes</p>
+                        						</code></pre>
+                       <pre class="fragment fade-in"><code data-trim contenteditable>
+<docker.image>fosscomm/awesome-image</docker.image>
+<docker.port.container.jolokia>8080</docker.port.container.jolokia>
+<fabric8.service.name>fosscomm-service</fabric8.service.name>
+<fabric8.label.key1>value1</fabric8.label.key1>
+<fabric8.label.key2>value2</fabric8.label.key2>
+						</code></pre>
+				    </section>
+                    <section>
+					   <h2>cdi integration</h2>
+                        <ul>
+							<li>"Hybrid"</li>
+							<li>client injection</li>
+							<li>services injection</li>
+						</ul>
+				    </section>
+                    <section>
+					   <h2>service injection</h2>
+                       <pre class="fragment fade-in"><code data-trim contenteditable>
+@Inject
+@ServiceName("mysqldb")
+private String mysqlUrl;
+						</code></pre>
+				    </section>
+                    <section>
+						<h2>how cool would it be...</h2>
+						<p class="fragment roll-in"> To not only inject the service coords...</p>
+						<p class="fragment roll-in">...but also the clients?</p>
+						<img width="512" height="328" class="fragment fade-in" src="images/shut-up-and-take-my-money.jpg" alt="Shutup and take my money">
+					</section>
+                    <section>
+					   <h2>client injection</h2>
+                                               <pre class="fragment fade-in"><code data-trim contenteditable>
+@Inject
+@ServiceName("mysqldb")
+private Connection mysqlConnection;
+						</code></pre>
+                       <pre class="fragment fade-in"><code data-trim contenteditable>
+@Factory
+@ServiceName
+public Connection create(@ServiceName @Protocol("jdbc:mysql") String url) {
+    Class.forName("com.mysql.jdbc.Driver");
+    return DriverManager.getConnection(serivceUrl + "/" + DB); 
+}
+						</code></pre>
+                        <p class="fragment fade-in">@Factory = Pass through @Produces</p>
+				    </section>
+                    <section>
+                   <h2>springboot integration</h2>
+                        <ul>
+							<li>share annotations with CDI</li>
+                            <li>easy migration from cdi to springboot and vice versa</li>
+						</ul>
+                    </section>     
+                       <section>
+						<h2>Testing</h2>
+					</section>
+                    <section>
+						<h2>What do we need to test?</h2>
+						<ul>
+							<li>Code</li>
+							<li>Images</li>
+							<li>Configuration</li>			
+						</ul>					
+					</section>
+					<section>
+						<h2>How do we need to test it?</h2>
+						<p> We need to test everything as whole</p>
+						<img width="512" height="328" src="images/big-bang.jpg" alt="Big Bang">
+                        <p class="fragment fade-in">You can't afford not to test exactly what you ship</p>
+					</section>
+                    <section>
+					   <h2>arquillian</h2>       
+                        <img  src="images/arquillian-logo.png" alt="Arquillian Logo">
+				    </section> 
+                    <section>
+						<h2>Fabric8 Arquillian Extension</h2>
+					    <ol>
+							<li>creates a session</li>
+							<li>deploys application</li>
+							<li>waits for ready state</li>
+                            <li>run the test suite</li>
+                            <li>cleans up</li>
+						</ol>
+					</section>
+        			<section>
+						<h2>What is a Session?</h2>
+					    <ul>
+					    	<li>The interaction with Kubernetes</li>
+					    	<li>Shares lifecycle with the test Suite</li>
+							<li>Has a unique Kubernetes Namespace</li>
+							<li>What happens in session stays in session</li>		
+						</ul>
+					</section>
+					<section>
+						<h2>Dependency Discovery</h2>
+					    <ul>
+							<li>Using the classpath</li>
+							<li>Using the pom.xml</li>
+							<li>Explicitly specified as a URL (works with mvn URLs too)</li>	
+						</ul>
+						<pre class="fragment fade-in"><code data-trim contenteditable>
+<extension qualifier="kubernetes">
+    <property name="dependencies">
+        mvn:my.groupId/my-artifact/1.0/json/kubernetes
+    </property>
+</extension>					
+						</code></pre>
+					</section>
+					<section>
+						<h2>Arquillian Resources Example</h2>
+						<pre><code data-trim contenteditable>
+
+@RunWith(Arquillian.class)
+public class SuperCoolTest {
+
+    @ArquillianResource
+    KubernetesClient client;
+
+    @ArquillianResource
+    static Session session;
+
+    @Test
+    public void testStuff() {
+       //test stuff
+    }
+}
+				
+						</code></pre>
+					</section>
+                    					<section>
+						<h2>Arquillian Resources Example</h2>
+						<pre><code data-trim contenteditable>
+
+@RunWith(Arquillian.class)
+public class OtherSuperCoolTest {
+
+    @Pod("mysql-pod")
+    @ArquillianResource
+    Pod pod;
+    
+    @ReplicationControllerName("mysql-controller")
+    @ArquillianResource
+    ReplicationController replicationController;
+    
+    @ServiceName("mysql")
+    @ArquillianResource
+    Service service;
+
+
+    @Test
+    public void testOtherStuff() {
+       //test other stuff
+    }
+}
+				
+						</code></pre>
+					</section>
+					<section>
+						<h2>Assertion Examples</h2>
+						<pre><code data-trim contenteditable>
+@Test
+public void superTest() {
+	assertThat(client)
+	.replicationController("super-controller", session.getNamespace())
+	.isNotNull();
+
+	assertThat(client).pods()
+                .runningStatus()
+                .filterNamespace(session.getNamespace())
+                .haveAtLeast(3, (Condition)(podSchema) ->{return true});
+}
+					
+						</code></pre>
+						 
+					</section>
+				</section>
+				<section>
+					<h2>Questions?</h2>
+				</section>
+				<section>
+					<h2>THE END</h2>
+				</section>
+
+			</div>
+			<footer style="display:none;">
+				<div style="float:center;">Kubernetes for Java Developers - Ioannis Canellos - FOSCOMM 2015</div>
+			</footer>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'footer.reveal.js', condition: function() { return !!document.querySelector( 'footer' );} }
+
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

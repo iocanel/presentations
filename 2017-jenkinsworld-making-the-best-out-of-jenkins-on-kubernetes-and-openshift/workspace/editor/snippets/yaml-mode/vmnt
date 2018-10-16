@@ -1,0 +1,5 @@
+# key: vmnt
+# name: Volume Mount
+# --
+name: ${1}
+mountPath: ${2}$0

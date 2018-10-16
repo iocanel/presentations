@@ -1,0 +1,6 @@
+# key: cport
+# name: Container Port
+# --
+name: ${1:http}
+containerPort: ${2:8080}$0
+protocol: TCP

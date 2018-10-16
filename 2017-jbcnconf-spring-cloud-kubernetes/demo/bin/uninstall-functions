@@ -1,0 +1,8 @@
+#!/bin/bash
+pushd /_storage/workspace/src/github.com/iocanel/presentations/demo/functions
+pwd
+kubectl delete -f sum/target/classes/META-INF/fabric8/kubernetes.yml
+kubectl delete -f diff/target/classes/META-INF/fabric8/kubernetes.yml
+kubectl delete -f pow/target/classes/META-INF/fabric8/kubernetes.yml
+kubectl delete -f sqrt/target/classes/META-INF/fabric8/kubernetes.yml
+popd

@@ -1,0 +1,6 @@
+# key: inns
+# name: In Namespace
+# --
+inNamespace(prefix: '${1:mynamespace}') {
+  $0
+}

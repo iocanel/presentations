@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Simple Kubernetes Pipeline
+# key: kps
+# --
+node {
+    kubernetes.pod().withImage('${1:image}').inside {
+        git 'https://github.com/iocanel/${2:helloworld}.git'
+        sh '$0'
+    }
+}

@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: presentation
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: presentation
+    spec:
+      containers:
+      - name: presentation-container
+        image: iocanel/voxxedthess:2016
+        ports:
+        - containerPort: 8080

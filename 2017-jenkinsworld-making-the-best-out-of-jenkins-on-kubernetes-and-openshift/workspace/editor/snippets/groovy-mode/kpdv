@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Kubernetes Pipeline with Docker Access
+# key: kpdv
+# --
+kubernetes.pod().withHostPath('/var/run/docker.sock', '/var/run/docker.sock')
+    .withNewContainer()
+    .withPrivileged()
+    .withImage('${1:myimage}')
+    .inside {
+        git 'https://github.com/iocanel/${2:helloworld.git}'
+        sh '$0'
+    }
