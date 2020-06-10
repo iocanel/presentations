@@ -1,0 +1,173 @@
+* JHUG: June 2020
+** Contributing to Opensource
+*** The 10 minute guide to
+    - Why
+    - What
+    - Which
+    - When
+    - How
+**** Ioannis Canellos
+* About me
+ - ASF member
+ - Committer
+   - Apache Camel
+   - Quarkus
+ - Creator
+  - Fabric8 Kubernetes framework
+  - Spring Cloud Kubernetes
+  - Dekorate
+ - Red Hatter *(hint: why)*
+* Why #1: You CAN get paid for it
+   - Sponshorship
+   - Get an OSS job
+* Why #2: It's a strong point in your CV
+** Proof 
+    - skills
+      - code reading
+      - code writing
+      - problem solving
+      - comunication
+    - passion
+    - commitment (and sheer @#!&$#ing will)
+** Achievement
+    - Commiter
+    - PMC
+* Why #3: You learn alot
+  - Contributing -> feedback loop 
+    ~Art of learning - Josh Waitzkin~
+  - Diversity
+    - styles
+    - tools
+    - patterns
+* Why #4: Meet your heros
+The are only two sports in the world ... 
+
+* What #1: Code
+  - Too obvious
+    - Test
+    - Fixes
+    - Features
+* What #2: Documentation
+* What #3: Report issues
+** Acknowledges
+    - There are people using the project
+    - There are people using the feature
+** Essential 
+    - Community building
+    - Steering the project to the right direction
+
+*** "Knowing the issue is 50% of the work"
+* What #4: Community engagement
+  - Forums
+  - Mailing lists
+  - Stack overflow
+  - Talks
+  - Videos
+  - Blogging
+* Which #1: New vs Established
+** New
+    - Simple codebase (?)
+    - Crossing the chasm 
+      - Community
+      - Contributors
+    - Less visibility
+** Established
+    - Complex codebase (?)
+    - Larger contribution volume
+    - Harder to standaout
+      - Quarkus: 93 open pull requests ATM *(hint: when)*
+*** Fact
+    - In ASF incubator:
+      - A podling *MUST* invite 1+ committer(s) 
+* Which #2: Day job related
+  - Motivation
+  - Time
+  - Multiple gains
+** True story:
+    - 1st contrubtion: Job related fix *Apache ServiceMix*
+      - Meet the right people
+        - Community engagement
+          - IRC
+          - Mailing lists
+      - Introduced to *Apache Karaf*
+      - Become an *Apache Karaf* committer
+        - Started using *Apache Karaf* at work
+        - Hired by *FuseSource* to work on *Apache Karaf*
+* Which #3: Passion
+  - Ephemeral contributions *(limited value)*
+    - A bug getting fixed
+  - Long term participation *(bigger returns)* *(hint how)*
+    - Recognition
+      - Committership
+      - Influence
+      - Job
+      - Cool T-shirts
+
+** If you don't like it you can't sustain it!
+*** Find something you are passionate about!
+* How #1 Google Summer of Code
+   - A 3 month program for students
+   - Mentoring from OSS organization
+     - ASF
+     - Eclipse
+     - Red Hat
+     - more
+*** https://summerofcode.withgoogle.com/
+* How #2 Github
+  - Read the contributors guide
+  - Familiarize with git and pull requests
+  - Search for issues labeled:
+    - Good first issue
+    - Low hanging fruit
+* Tips #1: It's a marathon
+** Size doesn't matter!
+   - A big contribution will get some attention
+   - It's the long run the gives recognition
+*** True story    
+     - Ioannis P. & Apache Camel
+       - Created an excellent component
+         - [[https://camel.apache.org/components/latest/hazelcast-map-component.html][camel-hazelcast]]
+       - Didn't sustain the effort
+       - Not even listed at [[https://camel.apache.org/manual/latest/team.html][contributors page]]
+       - I often get credit for [[https://camel.apache.org/components/latest/hazelcast-map-component.html][camel-hazelcast]]
+* Tips #2: Code first, talk later or not ...
+  - Easier to communicate an idea in code
+  - Give them a glimpse of the future 
+    ~Pragmatic Programmer: Stone soup~
+*** True stories    
+    - Ideas rejected on paper
+      - How about creating a DSL for manipulation Kuberentes resources?
+        - [[https://github.com/fabric8io/kubernetes-client][Fabric8 Kubernetes Framework]]
+      - What if we generated Kubernetes manifests using APT?
+        - [[https://github.com/dekorateio/dekorate][Dekorate]]
+* Tips #3: Do talk
+  - Communication is important
+    - Coordinate with others
+    - Build bonds
+* Tips #4: Don't be a jerk
+  - Be polite!
+  - Be friendly!
+  - Don't be self entitled!
+  - Don't take it out on others!
+* Tips #5: Don't be intimidated
+** Putting your code out there can be scary
+    - You will make mistakes
+      - *Everyone* does
+        - Even the *legends*
+      - And it's ok
+      - But there might be those times ...
+** True stories
+  - I've been devsplained on field where I am undeniably an expert
+  - I've been insulted and yelled for commiting pom.xml with SNAPSHOT deps
+  
+*** Nothing can beat the joy and reward of contributing!    
+
+* Tips #6: Just do it
+Your favorite motivation speech goes here!
+* Thank you for your time!
+
+
+
+
+
+
