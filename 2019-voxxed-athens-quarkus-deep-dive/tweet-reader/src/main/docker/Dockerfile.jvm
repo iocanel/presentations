@@ -1,0 +1,28 @@
+####
+# This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
+#
+# Before building the docker image run:
+#
+# mvn package
+#
+# Then, build the image with:
+#
+# docker build -f src/main/docker/Dockerfile.jvm -t quarkus/tweet-reader-jvm .
+#
+# Then run the container using:
+#
+# docker run -i --rm -p 8080:8080 quarkus/tweet-reader-jvm
+#
+###
+FROM fabric8/java-centos-openjdk8-jdk
+ENV JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+ENV AB_ENABLED=jmx_exporter
+COPY mvnw /deployments/mvnw
+COPY .mvn /deployments/.mvn
+COPY src /deployments/src
+COPY pom.xml /deployments/pom.xml
+
+USER root
+RUN chown -R jboss src
+USER jboss
+ENTRYPOINT [ "./mvnw", "compile", "quarkus:dev" ]
