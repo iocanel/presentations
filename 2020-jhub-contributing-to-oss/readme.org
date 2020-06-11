@@ -1,3 +1,14 @@
+#+TITLE:     Contributing to OSS
+#+AUTHOR:    Ioannis Canellos
+#+EMAIL:     iocanel@gmail.com
+#+DATE:      2020-06-10 Wed
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:1 num:nil toc:nil 
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: default
 * JHUG: June 2020
 ** Contributing to Opensource
 *** The 10 minute guide to
