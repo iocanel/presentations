@@ -11,11 +11,9 @@
 #+BEAMER_THEME: default
 * JHUG: June 2020
 ** Contributing to Opensource
-*** The 10 minute guide to
+*** The 15 minute guide to
     - Why
     - What
-    - Which
-    - When
     - How
 **** Ioannis Canellos
 * About me
@@ -52,13 +50,14 @@
     - patterns
 * Why #4: Meet your heros
 The are only two sports in the world ... 
-
 * What #1: Code
   - Too obvious
     - Test
     - Fixes
     - Features
 * What #2: Documentation
+  - All projects need a community
+  - There can't be a community without documentation
 * What #3: Report issues
 ** Acknowledges
     - There are people using the project
