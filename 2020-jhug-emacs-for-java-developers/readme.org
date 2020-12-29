@@ -1,0 +1,147 @@
+* #+TITLE: Emacs for java developers
+#+AUTHOR: Ioannis Canellos
+#+EMAIL: iocanel@gmail.com
+#+DATE: 2020-12-29 Tue
+#+STARTUP: inlineimages
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:1 num:nil toc:nil 
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: default
+
+* Emacs for Java developers
+
+  [[./Emacs_4_java_developers_-_JHUG_-_480.png]]
+
+*  About me
+
+  [[./forbiden-intellij.png]]
+  - 10+ years of IntelliJ addiction
+  - Put myself in the hands of a higher power
+  - 2+ years clean
+* What is emacs ?
+  [[./emacs_-_480.png]]
+  - A text editor
+  - A lisp interpreter
+
+* A lisp what?
+
+  [[./psilomitis-me-master.jpg]]
+
+  That's the first thing that comes to my mind, but ...
+
+  *Text editor* + *lisp* = *framework* for text based apps !!!
+
+  
+  
+* Emacs history (the java developer perspective)
+     
+  [[./gosling-emacs.jpg]]
+
+  - James Gosling
+    - 1981 Gosling Emacs
+    - 1991 Java
+    - 2008 Stop using Emacs for Java development!
+
+  - 2016 The language server protocol
+   
+* Language server protocol for Java
+
+  - jdt.ls
+    - A language server for java
+    - It's basically eclipse
+    - Works great out of the
+    - Powers most modern Java development environments:
+      - Eclipse
+      - VSCode
+      - Vim
+      - Emacs
+
+* My story with Emacs
+  
+  - Presentations
+    - reveal.js
+      - was looking for markdown -> reveal.js
+    - jenkins
+      - needed to exectue pipelines from buffer
+    - kubernetes
+      - needed to monitor resources
+        - logs
+        - executue
+      - to demonstrate handcrafting resources
+        
+    - Exploring other capabilities
+      - Mail reader
+      - File manager
+      - Agenda
+
+    - Started experimenting with Java
+      - 2018: meghanada-mode
+      - 2019: lsp-mode
+      - 2019: became my only editor
+
+* Emacs distributions
+
+  - Spacemacs
+
+    [[./spacemacs_-_200.png]]
+ - Doom
+
+   [[./doom_-_400.png]] 
+
+ - Prelude
+ - Your own
+     
+* Emacs as a Java IDE
+
+  - Plugins I use
+
+    - [[https://github.com/bbatsov/projectile][projectile]]
+    - [[https://magit.vc/][magit]]
+    - [[https://github.com/joaotavora/yasnippet][yasnipet]]
+    - [[https://github.com/emacs-lsp/lsp-java][lsp-java]]
+
+  - My plugins
+    - [[https://github.com/iocanel/idee][idee]]
+    
+* Demo
+  
+  - Create a spring project
+  - Add a maven dependency
+  - Edit the code
+  - Demonstrate undo tree
+  - Compile
+  - Add pojo with constructors getters and setters
+  - Add rest controller
+  - Open a larger project
+  - Show magit
+  - Show pull requests, review a pull request
+
+* My takeaway
+
+  - Tastes are subjective
+  - Emacs can be a great Java IDE
+  - Emacs is not for everyone
+  - Use whatever makes you feel joy
+
+  - *Do* hack your tools!
+    - Editor
+      - emacs
+      - vim
+      - vscode
+      - atom
+    - Window manager
+      - i3
+      - xmonad
+      - more ...
+    - Menu
+      - dmenu
+      - rofi
+
+  - Do *not* get carried away!
+    - Be pragmatic!
+    - Emacs as a procrastination platform!
+
+* Questions
