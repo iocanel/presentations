@@ -20,7 +20,7 @@ A repository for my presnetations
 - [JHUG 2020: Emacs for Java Developers](https://github.com/iocanel/presentations/blob/master/2020-jhug-emacs-for-java-developers)
 - [Devoxx Athens 2023: Why and when to write a Quarkus extension](https://github.com/iocanel/presentations/blob/master/2023-devoxx-athens-quarkus-why-and-when-to-write-a-quarkus-extension)
 - [Zurich Developer Days 2023: Having fun with Quarkus on Kubernetes and Openshift](https://github.com/iocanel/presentations/blob/master/2020-zurich-devdays-quarkus-kubernetes)
-- [Athens University of Economics And Business 2023: Quarkus Workshop](https://github.com/iocanel/presentations/blob/master/2023-aueb-intro-to-quarkus)
+- [Athens University of Economics And Business 2023: Intro to Quarkus](https://github.com/iocanel/presentations/blob/master/2023-aueb-intro-to-quarkus)
 
 ## Other
 - [Fuse Face2Face 2013: What's new in Fuse Fabric 7.3](https://github.com/iocanel/presentations/blob/master/2013-fusef2f-whats-new-in-fuse-fabric-7-3)
