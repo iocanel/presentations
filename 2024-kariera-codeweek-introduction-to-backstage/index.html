@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          Introduction to
+          <img src="backstage.svg" />
+          <a href="https://iocanel.com">Ioannis Canellos</a>
+          <p/>
+          <a href="https://resources.kariera.gr/events/karieracodeweek/">
+            <image src="codeweek.webp" height="20"/>
+          </a>
+        </section>
+				<section>
+          about me ...
+          <img src="about-me.png" />
+        </section>
+      	<section>
+          <img src="backstage-pin.png"/> 
+          <ul>
+            <li>An open platform for building developer portals</li>
+            <li>Created by Spotify</li>
+            <li>Streamlining software development and maintenance</li>
+          </ul>
+        </section>
+        <section>
+         <img src="lets-take-a-step-back.png" />
+        </section>
+        <section>
+          Understanding the problems it tires to solve
+          <ul>
+            <li>Developer onboarding</li>
+            <li>Microservice Spaghetti</li>
+            <li>Wall of confusion</li>
+          </ul>
+        </section>
+       <section>
+         How backstage solves these problems ?
+         <ul>
+           <li>Unified developer portal</li>
+           <li>Service Catalog</li>
+           <li>Software Tempaltes</li>
+           <li>Plugins</li>
+         </ul>
+       </section>
+       <section>
+         demonstration
+       </section>
+       <section>
+         questions ?
+       </section>
+       <section>
+         <img src="qrcode.png" width="512" height="512" />
+       </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
