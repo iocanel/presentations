@@ -21,6 +21,10 @@ A repository for my presnetations
 - [Devoxx Athens 2023: Why and when to write a Quarkus extension](https://github.com/iocanel/presentations/blob/master/2023-devoxx-athens-quarkus-why-and-when-to-write-a-quarkus-extension)
 - [Zurich Developer Days 2023: Having fun with Quarkus on Kubernetes and Openshift](https://github.com/iocanel/presentations/blob/master/2020-zurich-devdays-quarkus-kubernetes)
 - [Athens University of Economics And Business 2023: Intro to Quarkus](https://github.com/iocanel/presentations/blob/master/2023-aueb-intro-to-quarkus)
+- [Voxxed Days Ioannina 2024: What I learned writing code generators for almost a decade](https://github.com/iocanel/presentations/blob/master/2024-voxexed-ioannina-what-i-learned-writing-code-generators)
+- [Kariera Codeweek 2024: Introduction to Backstage](https://github.com/iocanel/presentations/blob/master/2024-kariera-codeweek-introduction-to-backstage)
+- [Devoxx Greece 2024: Using Backstage as a CV](https://github.com/iocanel/presentations/blob/master/2024-devoxx-gr-using-backstage-as-a-cv)
+- [OpenConf Hackathon 2024: Quakrus LangChain4J](https://github.com/iocanel/presentations/blob/master/2024-openconf-hackathon-quakrus-langchain4j)
 
 ## Other
 - [Fuse Face2Face 2013: What's new in Fuse Fabric 7.3](https://github.com/iocanel/presentations/blob/master/2013-fusef2f-whats-new-in-fuse-fabric-7-3)
