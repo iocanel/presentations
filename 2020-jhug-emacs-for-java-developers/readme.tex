@@ -1,0 +1,246 @@
+% Created 2020-12-31 Thu 14:46
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Ioannis Canellos}
+\date{2020-12-29 Tue}
+\title{}
+\hypersetup{
+ pdfauthor={Ioannis Canellos},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.3.7)}, 
+ pdflang={English}}
+\begin{document}
+
+\section*{\#+TITLE: Emacs for java developers}
+\label{sec:org61d92e6}
+
+\section*{Emacs for Java developers}
+\label{sec:org9c48149}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./Emacs_4_java_developers_-_JHUG_-_480.png}
+\end{center}
+
+\section*{About me}
+\label{sec:org03467f7}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./forbiden-intellij.png}
+\end{center}
+\begin{itemize}
+\item 10+ years of IntelliJ addiction
+\item Put myself in the hands of a higher power
+\item 2+ years clean
+\end{itemize}
+\section*{What is emacs ?}
+\label{sec:org66e3dc0}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./emacs_-_480.png}
+\end{center}
+\begin{itemize}
+\item A text editor
+\item A lisp interpreter
+\end{itemize}
+
+\section*{A lisp what?}
+\label{sec:org7577083}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./psilomitis-me-master.jpg}
+\end{center}
+
+That's the first thing that comes to my mind, but \ldots{}
+
+\textbf{Text editor} + \textbf{lisp} = \textbf{framework} for text based apps !!!
+
+
+
+\section*{Emacs history (the java developer perspective)}
+\label{sec:org8c8909b}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./gosling-emacs.jpg}
+\end{center}
+
+\begin{itemize}
+\item James Gosling
+\begin{itemize}
+\item 1981 Gosling Emacs
+\item 1991 Java
+\item 2008 Stop using Emacs for Java development!
+\end{itemize}
+
+\item 2016 The language server protocol
+\end{itemize}
+
+\section*{Language server protocol for Java}
+\label{sec:org9a70176}
+
+\begin{itemize}
+\item jdt.ls
+\begin{itemize}
+\item A language server for java
+\item It's basically eclipse
+\item Works great out of the
+\item Powers most modern Java development environments:
+\begin{itemize}
+\item Eclipse
+\item VSCode
+\item Vim
+\item Emacs
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section*{My story with Emacs}
+\label{sec:org265ffe2}
+
+\begin{itemize}
+\item Presentations
+\begin{itemize}
+\item reveal.js
+\begin{itemize}
+\item was looking for markdown -> reveal.js
+\end{itemize}
+\item jenkins
+\begin{itemize}
+\item needed to exectue pipelines from buffer
+\end{itemize}
+\item kubernetes
+\begin{itemize}
+\item needed to monitor resources
+\begin{itemize}
+\item logs
+\item executue
+\end{itemize}
+\item to demonstrate handcrafting resources
+\end{itemize}
+
+\item Exploring other capabilities
+\begin{itemize}
+\item Mail reader
+\item File manager
+\item Agenda
+\end{itemize}
+
+\item Started experimenting with Java
+\begin{itemize}
+\item 2018: meghanada-mode
+\item 2019: lsp-mode
+\item 2019: became my only editor
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section*{Emacs distributions}
+\label{sec:orgdb26274}
+
+\begin{itemize}
+\item Spacemacs
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./spacemacs_-_200.png}
+\end{center}
+\end{itemize}
+\begin{itemize}
+\item Doom
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./doom_-_400.png}
+\end{center}
+
+\item Prelude
+\item Your own
+\end{itemize}
+
+\section*{Emacs as a Java IDE}
+\label{sec:orgfa6c379}
+
+\begin{itemize}
+\item Plugins I use
+
+\begin{itemize}
+\item \href{https://github.com/bbatsov/projectile}{projectile}
+\item \href{https://magit.vc/}{magit}
+\item \href{https://github.com/joaotavora/yasnippet}{yasnipet}
+\item \href{https://github.com/emacs-lsp/lsp-java}{lsp-java}
+\end{itemize}
+
+\item My plugins
+\begin{itemize}
+\item \href{https://github.com/iocanel/idee}{idee}
+\end{itemize}
+\end{itemize}
+
+\section*{Demo}
+\label{sec:org3473fe6}
+
+\begin{itemize}
+\item Create a spring project
+\item Add a maven dependency
+\item Edit the code
+\item Demonstrate undo tree
+\item Compile
+\item Add pojo with constructors getters and setters
+\item Add rest controller
+\item Open a larger project
+\item Show magit
+\item Show pull requests, review a pull request
+\end{itemize}
+
+\section*{My takeaway}
+\label{sec:org44754d2}
+
+\begin{itemize}
+\item Tastes are subjective
+\item Emacs can be a great Java IDE
+\item Emacs is not for everyone
+\item Use whatever makes you feel joy
+
+\item \textbf{Do} hack your tools!
+\begin{itemize}
+\item Editor
+\begin{itemize}
+\item emacs
+\item vim
+\item vscode
+\item atom
+\end{itemize}
+\item Window manager
+\begin{itemize}
+\item i3
+\item xmonad
+\item more \ldots{}
+\end{itemize}
+\item Menu
+\begin{itemize}
+\item dmenu
+\item rofi
+\end{itemize}
+\end{itemize}
+
+\item Do \textbf{not} get carried away!
+\begin{itemize}
+\item Be pragmatic!
+\item Emacs as a procrastination platform!
+\end{itemize}
+\end{itemize}
+
+\section*{Questions}
+\label{sec:orga19cddb}
+\end{document}

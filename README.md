@@ -1,5 +1,5 @@
 # My presentations
-A repository for my presnetations
+A repository for my presentations
 
 ## Conferences
 
@@ -7,7 +7,7 @@ A repository for my presnetations
 - [Camel One 2012: Apache Karaf Cellar and Fuse Fabric](https://github.com/iocanel/presentations/blob/master/2012-camelone-apache-karaf-cellar-and-fuse-fabric)
 - [Camel One 2013: Advanced Integration Testing with Fuse Fabric](https://github.com/iocanel/presentations/blob/master/2013-camelone-advanced-integration-testing-with-fuse-fabric)
 - [DevNation 2014: Introduction to Fabric8](https://github.com/iocanel/presentations/blob/master/2014-devnation-introduction-to-fabric8)
-- [DevNation 2014: Fabric8: Depp Dive](https://github.com/iocanel/presentations/blob/master/2014-devnation-fabric8-deep-dive)
+- [DevNation 2014: Fabric8: Deep Dive](https://github.com/iocanel/presentations/blob/master/2014-devnation-fabric8-deep-dive)
 - [JavaSi 2014: Introduction to Fabric8](https://github.com/iocanel/presentations/blob/master/2014-javasi-introduction-to-fabric8)
 - [FOSSCOM 2015: Kubernetes for Java Developers](https://github.com/iocanel/presentations/blob/master/2015-fosscom-kubernetes-for-java-developers)
 - [Voxxed Thessaloniki 2016: Getting started with microservices on Kubernetes](https://github.com/iocanel/presentations/blob/master/2016-voxxed@thessaloniki-getting-started-with-microservices-on-kubernetes)
@@ -15,16 +15,19 @@ A repository for my presnetations
 - [Jenkins World 2017: Making the best out of Jenkins on Kubernetes and Openshift](https://github.com/iocanel/presentations/blob/master/2017-jenkinsworld-making-the-best-out-of-jenkins-on-kubernetes-and-openshift)
 - [Voxxed Athens 2019: Get your hands dirty with Quarkus](https://github.com/iocanel/presentations/blob/master/2019-voxxed-athens-quarkus-deep-dive)
 - [Java Days Sofia 2019: Quarkus Workshop](https://github.com/iocanel/presentations/blob/master/2019-java2days-sofia-quarkus-workshop)
-- [JHUG 2020: Contributing to OSS](https://github.com/iocanel/presentations/blob/master/2020-jhub-contributing-to-oss)
+- [JHUG 2020: Contributing to OSS](https://github.com/iocanel/presentations/blob/master/2020-jhug-contributing-to-oss)
 - [Devnation live 2020: Quarkus: from developer joy to kubernetes nirvana](https://github.com/iocanel/presentations/blob/master/2020-devnation-quarkus-from-developer-joy-to-kubernetes-nirvana)
 - [JHUG 2020: Emacs for Java Developers](https://github.com/iocanel/presentations/blob/master/2020-jhug-emacs-for-java-developers)
 - [Devoxx Athens 2023: Why and when to write a Quarkus extension](https://github.com/iocanel/presentations/blob/master/2023-devoxx-athens-quarkus-why-and-when-to-write-a-quarkus-extension)
-- [Zurich Developer Days 2023: Having fun with Quarkus on Kubernetes and Openshift](https://github.com/iocanel/presentations/blob/master/2020-zurich-devdays-quarkus-kubernetes)
+- [Zurich Developer Days 2023: Having fun with Quarkus on Kubernetes and Openshift](https://github.com/iocanel/presentations/blob/master/2023-zurich-developer-day-quarkus-kubernetes)
 - [Athens University of Economics And Business 2023: Intro to Quarkus](https://github.com/iocanel/presentations/blob/master/2023-aueb-intro-to-quarkus)
-- [Voxxed Days Ioannina 2024: What I learned writing code generators for almost a decade](https://github.com/iocanel/presentations/blob/master/2024-voxexed-ioannina-what-i-learned-writing-code-generators)
+- [Quarkus Insights 2023: Quarkus CLI & JBang](https://github.com/iocanel/presentations/blob/master/2023-quarkus-insights-quarkus-cli-jbang)
+- [Voxxed Days Ioannina 2024: What I learned writing code generators for almost a decade](https://github.com/iocanel/presentations/blob/master/2024-voxxed-ioannina-what-i-learned-writing-code-generators)
+- [Vodafone 2024: Introduction to Backstage](https://github.com/iocanel/presentations/blob/master/2024-vodafone-introduction-to-backstage)
 - [Kariera Codeweek 2024: Introduction to Backstage](https://github.com/iocanel/presentations/blob/master/2024-kariera-codeweek-introduction-to-backstage)
 - [Devoxx Greece 2024: Using Backstage as a CV](https://github.com/iocanel/presentations/blob/master/2024-devoxx-gr-using-backstage-as-a-cv)
-- [OpenConf Hackathon 2024: Quakrus LangChain4J](https://github.com/iocanel/presentations/blob/master/2024-openconf-hackathon-quakrus-langchain4j)
+- [OpenConf Hackathon 2024: Quarkus LangChain4J](https://github.com/iocanel/presentations/blob/master/2024-openconf-hackathon-quakrus-langchain4j)
+- [Software Architecture Summit Bucharest 2025: Introduction to Backstage](https://github.com/iocanel/presentations/blob/master/2025-architecture-summit-introduction-to-bakcstage)
 
 ## Other
 - [Fuse Face2Face 2013: What's new in Fuse Fabric 7.3](https://github.com/iocanel/presentations/blob/master/2013-fusef2f-whats-new-in-fuse-fabric-7-3)
